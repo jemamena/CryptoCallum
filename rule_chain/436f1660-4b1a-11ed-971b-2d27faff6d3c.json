@@ -1,0 +1,752 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1665681169094,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "43a05f90-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "436f1660-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "name" : "telemetry",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 2,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 21,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 23,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 24,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 2,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 17,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 972,
+        "layoutY" : 109
+      },
+      "configuration" : {
+        "fieldsMapping" : {
+          "name" : "name"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439bcbb0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "sequence",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1495,
+        "layoutY" : 934
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s8;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439cdd20-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s8",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 911,
+        "layoutY" : 689
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s8",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439d2b40-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq8",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1493,
+        "layoutY" : 810
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s6;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439d5250-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s6",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 908,
+        "layoutY" : 563
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s6",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439da070-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq6",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1494,
+        "layoutY" : 873
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s7;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439dc780-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s7",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 912,
+        "layoutY" : 626
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s7",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439e15a0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq7",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1492,
+        "layoutY" : 747
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s5;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439e63c0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s5",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 906,
+        "layoutY" : 499
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s5",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439e8ad0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq5",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1491,
+        "layoutY" : 684
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s4;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439eb1e0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s4",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 903,
+        "layoutY" : 441
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s4",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439ed8f0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq4",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1489,
+        "layoutY" : 562
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s2;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439f2710-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 903,
+        "layoutY" : 318
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s2",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439f4e20-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1488,
+        "layoutY" : 625
+      },
+      "configuration" : {
+        "jsScript" : "var seq=msg.s3;\n\n\nif (seq.hasOwnProperty(\"tradeType\"))tradeType=seq.tradeType;\nelse{\n    var trends=msg.trends;\n    \n    msg={};\n    for (var pos in seq){\n        msg[pos]=seq[pos];\n    }\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n    // msg.seq=seq;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n}\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439f7530-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 904,
+        "layoutY" : 381
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s3",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439f7531-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 631,
+        "layoutY" : 246
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s1';\n\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439f9c40-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 899,
+        "layoutY" : 253
+      },
+      "configuration" : {
+        "direction" : "TO",
+        "entityType" : "ASSET",
+        "entityNamePattern" : "s1",
+        "entityTypePattern" : "sequence",
+        "relationType" : "Contains",
+        "createEntityIfNotExists" : false,
+        "removeCurrentRelations" : false,
+        "changeOriginatorToRelatedEntity" : true,
+        "entityCacheExpiration" : 300
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "439fc350-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Seq1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateRelationNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 343,
+        "layoutY" : 247
+      },
+      "configuration" : {
+        "jsScript" : "// for (var indicators in msg){\n//     msg[indicators]=msg[indicators].value;\n// }\nvar tradeType=metadata.tradeType;\nvar trade;\nvar sequence;\nif (msg.hasOwnProperty(\"method\")){\n    if (msg.method==\"tradePrep\"){\n        trade=0;\n        \n        sequence=\"s\"+metadata.sequence;\n    }\n    else if (msg.method==\"tradeReady\"){\n        trade=(metadata.trade==\"buy\")?-1:1;\n    }\n    else if (msg.method==\"tradeExec\"){\n        trade=(metadata.cs_trade==\"buy\")?-1:1;\n        sequence=\"s\"+metadata.cs_sequence;\n    }\n    else if (msg.method==\"tradeDone\"){\n        //trade=(metadata.cs_trade==\"buy\")?-1:1;\n        trade=0;\n        sequence=\"s\"+metadata.cs_sequence;\n    }\n    msg={};\n    msg[sequence]={};\n    msg[sequence].trade=trade;\n    msg[sequence].tradeType=tradeType;\n    \n    // msg.hola=\"test\";\n    \n}\nelse{\n    var sequences=msg.sequences;\n    var config=msg.config;\n    var trends=msg.config.trend;\n    var names={};\n\n\n// msg.s1p1_name=sequences['s1'].position['p1'].name;\n// msg.s1=sequences['s1'];\n\n    msg={};\n    \n    // msg.config=config;\n    // msg.trends={};\n\n    // for (var seqs in sequences){\n    //     msg[seqs]={};\n    //     names[seqs]={};\n    //     for (var pos in sequences[seqs].position){\n    //         if (sequences[seqs].enable==true){\n    //             names[seqs][pos+\"_name\"]=sequences[seqs].position[pos].name;\n    //             // msg[seqs].enable=sequences[seqs].enable;\n    //             msg[seqs][pos]={};\n    //             msg[seqs][pos]=(sequences[seqs].position[pos].hasOwnProperty('value'))?sequences[seqs].position[pos].value:\"0\";\n    //         }\n    //         msg[seqs].enable=sequences[seqs].enable;\n    //     }\n    // }\n    \n    // for (var trend in trends){\n    //     names[trend+\"_name\"]=trends[trend].name;\n    //     msg.trends[trend]={};\n    //     msg.trends[trend]=(trends[trend].hasOwnProperty('value'))?trends[trend].value:\"0\";\n    // } \n    \n    // metadata.names=JSON.stringify(names);\n    // delete msg.config.trend;\n}\n\n// msgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n \n\n"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a05f90-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "prepare sequences",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 1265,
+        "layoutY" : 408
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a0adb0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Save Timeseries",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 692,
+        "layoutY" : 91
+      },
+      "configuration" : {
+        "jsScript" : "return msg.temperature > 20;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a0fbd0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "S1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1376,
+        "layoutY" : 166
+      },
+      "configuration" : {
+        "jsScript" : "var seq=\"s1\";\n\nif (msg.hasOwnProperty(seq)){\n    var seqObj={};\n    seqObj=msg[seq];\n    msg={};\n    msg[seq]=seqObj;\n    msgType=\"POST_TELEMETRY_REQUEST\";\n    return {msg: msg, metadata: metadata, msgType: msgType};\n}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a149f0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "S1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 633,
+        "layoutY" : 316
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s2';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a19810-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 637,
+        "layoutY" : 386
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s3';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a1bf20-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 638,
+        "layoutY" : 444
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s4';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a23450-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s4",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 642,
+        "layoutY" : 504
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s5';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a2a980-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s5",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 644,
+        "layoutY" : 558
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s6';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a2d090-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s6",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 646,
+        "layoutY" : 622
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s7';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a31eb0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s7",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 645,
+        "layoutY" : 678
+      },
+      "configuration" : {
+        "jsScript" : "var s=\"s\"+metadata.cs_sequence;\nvar seq='s8';\n\n\nif (msg[seq].hasOwnProperty(\"trade\") && s==seq){\n    var trade=msg[s].trade;\n    var tradetype=msg[s].tradetype;\n    msg={};\n    msg.trade=trade;\n    msg.tradetype=tradetype;\n}else{\n    var seqObj={};\n    seqObj=msg[seq];\n    var trends=msg.trends;\n    \n    \n    msg={};\n    if (seqObj.enable===true){\n        msg.enable=true;\n        for (var pos in seqObj){\n            msg[pos]=seqObj[pos];\n        }\n    }else msg.enable=false;\n    for (var trend in trends){\n        msg[trend]=trends[trend];\n    }\n    \n}\nmsgType=\"POST_TELEMETRY_REQUEST\";\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a345c0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "s8",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 270,
+        "layoutY" : 114
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ "sequence" ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "43a36cd0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Get sequence",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
