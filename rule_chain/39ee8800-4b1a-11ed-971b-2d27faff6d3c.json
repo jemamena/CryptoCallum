@@ -75,6 +75,10 @@
       "toIndex" : 9,
       "type" : "False"
     }, {
+      "fromIndex" : 6,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
       "fromIndex" : 10,
       "toIndex" : 11,
       "type" : "Success"
@@ -334,6 +338,27 @@
       "name" : "count alarms",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 593,
+        "layoutY" : 539
+      },
+      "configuration" : {
+        "serviceIdMetaDataAttribute" : "serviceId",
+        "sessionIdMetaDataAttribute" : "sessionId",
+        "requestIdMetaDataAttribute" : "requestId"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f1f1e0b0-4cd1-11ed-84ff-91e3a93d7908"
+      },
+      "name" : "Trade finished",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode"
     } ],
     "ruleChainConnections" : null
   },

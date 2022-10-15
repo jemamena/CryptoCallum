@@ -1525,49 +1525,6 @@
           "col" : 0,
           "id" : "a6432f35-fb14-6d7d-5fdd-22a3b52e6db3"
         },
-        "86a1b623-a9cc-6ac1-49ff-dfc4e40ab362" : {
-          "isSystemType" : false,
-          "bundleAlias" : "rossmann_new",
-          "typeAlias" : "switch6",
-          "type" : "rpc",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
-          "sizeX" : 5,
-          "sizeY" : 4.5,
-          "config" : {
-            "targetDeviceAliases" : [ ],
-            "showTitle" : false,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0",
-            "settings" : {
-              "requestTimeout" : 500,
-              "retrieveValueMethod" : "Subscribe for attribute",
-              "statusRequestMethod" : "getValue",
-              "changeRequestMethod" : "setValue",
-              "convertStatusRequestMethod" : "return data ? true : false;",
-              "convertStatusChangeMethod" : "return value;",
-              "updateValueKey" : "active"
-            },
-            "title" : "New switch6",
-            "datasources" : [ ],
-            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
-            "showTitleIcon" : false,
-            "dropShadow" : false,
-            "enableFullscreen" : false,
-            "enableDataExport" : true,
-            "widgetStyle" : { },
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : false,
-            "margin" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "86a1b623-a9cc-6ac1-49ff-dfc4e40ab362"
-        },
         "6ddf0b25-ff94-b2e9-e50f-c570ac250017" : {
           "isSystemType" : true,
           "bundleAlias" : "entity_admin_widgets",
@@ -3042,6 +2999,103 @@
           "row" : 0,
           "col" : 0,
           "id" : "ca1cf2ff-782b-1e05-6562-6bf5e708a252"
+        },
+        "9d15798a-95b2-d788-9e26-846cf7e8de42" : {
+          "isSystemType" : true,
+          "bundleAlias" : "rossmann",
+          "typeAlias" : "switch6",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 4.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "retrieveValueMethod" : "Subscribe for attribute",
+              "updateValueKey" : "active",
+              "statusRequestMethod" : "getValue",
+              "changeRequestMethod" : "setValue",
+              "convertStatusRequestMethod" : "return data ? true : false;",
+              "convertStatusChangeMethod" : "return value;"
+            },
+            "title" : "New switch6",
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "9d15798a-95b2-d788-9e26-846cf7e8de42"
+        },
+        "1b47b216-73be-0586-ee07-f68ccbabee46" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Demo",
+              "initialValue" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "demo",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "setValue",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "New Round switch",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "1b47b216-73be-0586-ee07-f68ccbabee46"
         }
       },
       "states" : {
@@ -3199,8 +3253,8 @@
                 "09405200-61b7-49e1-42e6-b64695368796" : {
                   "sizeX" : 20,
                   "sizeY" : 6,
-                  "row" : 45,
-                  "col" : 22,
+                  "row" : 68,
+                  "col" : 21,
                   "mobileHeight" : 1,
                   "mobileHide" : true
                 },
@@ -3214,7 +3268,7 @@
                 },
                 "ff30debe-926b-5c10-8883-6e1940598b34" : {
                   "sizeX" : 21,
-                  "sizeY" : 28,
+                  "sizeY" : 34,
                   "row" : 17,
                   "col" : 21,
                   "mobileHide" : false,
@@ -3244,11 +3298,17 @@
                   "row" : 48,
                   "col" : 80
                 },
-                "86a1b623-a9cc-6ac1-49ff-dfc4e40ab362" : {
+                "9d15798a-95b2-d788-9e26-846cf7e8de42" : {
                   "sizeX" : 9,
-                  "sizeY" : 8,
+                  "sizeY" : 7,
                   "row" : 17,
                   "col" : 110
+                },
+                "1b47b216-73be-0586-ee07-f68ccbabee46" : {
+                  "sizeX" : 21,
+                  "sizeY" : 10,
+                  "row" : 51,
+                  "col" : 21
                 }
               },
               "gridSettings" : {

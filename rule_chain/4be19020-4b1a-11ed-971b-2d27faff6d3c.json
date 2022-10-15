@@ -72,7 +72,7 @@
       "type" : "True"
     }, {
       "fromIndex" : 8,
-      "toIndex" : 15,
+      "toIndex" : 19,
       "type" : "True"
     }, {
       "fromIndex" : 9,
@@ -87,20 +87,12 @@
       "toIndex" : 16,
       "type" : "RPC Request to Device"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 18,
-      "type" : "RPC Request from Device"
-    }, {
       "fromIndex" : 14,
       "toIndex" : 20,
       "type" : "Success"
     }, {
       "fromIndex" : 15,
       "toIndex" : 2,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 16,
@@ -121,6 +113,10 @@
     }, {
       "fromIndex" : 18,
       "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 15,
       "type" : "Success"
     }, {
       "fromIndex" : 21,
@@ -176,8 +172,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1952,
-        "layoutY" : 418
+        "layoutX" : 2038,
+        "layoutY" : 409
       },
       "configuration" : {
         "useMetadataPeriodInSecondsPatterns" : false,
@@ -261,7 +257,7 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 1163,
-        "layoutY" : 710
+        "layoutY" : 700
       },
       "configuration" : {
         "useMetadataPeriodInSecondsPatterns" : false,
@@ -430,7 +426,7 @@
         "layoutY" : 233
       },
       "configuration" : {
-        "jsScript" : "var tradeSize=msg.params.tradeSize;\nvar stopLoss=msg.params.stopLoss;\nvar takeProfit=msg.params.takeProfit;\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nvar tradeType=metadata.tradeType;\nvar trade=metadata.trade;\nvar sequence=metadata.sequence;\n\nmsg={};\n\nmsg.tradeSize=tradeSize;\nmsg.stopLoss=stopLoss;\nmsg.leverage=leverage;\nmsg.takeProfit=takeProfit;\nmsg.limit=limit;\nmsg.tradeType=tradeType;\nmsg.trade=trade;\nmsg.sequence=sequence;\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+        "jsScript" : "var tradeSize=msg.params.tradeSize;\nvar stopLoss=msg.params.stopLoss;\nvar takeProfit=msg.params.takeProfit;\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nvar tradeType=metadata.tradeType;\nvar trade=metadata.trade;\nvar sequence=metadata.sequence;\nvar strategy=msg.params.strategy;\n\nmsg={};\n\nmsg.tradeSize=tradeSize;\nmsg.stopLoss=stopLoss;\nmsg.leverage=leverage;\nmsg.takeProfit=takeProfit;\nmsg.limit=limit;\nmsg.tradeType=tradeType;\nmsg.trade=trade;\nmsg.sequence=sequence;\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
       },
       "createdTime" : 0,
       "debugMode" : true,
@@ -445,8 +441,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 1629,
-        "layoutY" : 458
+        "layoutX" : 1780,
+        "layoutY" : 445
       },
       "configuration" : {
         "timeoutInSeconds" : 60
@@ -464,11 +460,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 729,
+        "layoutX" : 689,
         "layoutY" : 387
       },
       "configuration" : {
-        "jsScript" : "\n\nvar total=parseFloat(metadata.total); \nvar tradeSize=parseFloat(msg.params.tradeSizePC);\nvar stopLoss=parseFloat(msg.params.stopLossPC);\nvar takeProfit=parseFloat(msg.params.takeProfitPC);\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nmetadata.trade=msg.params.trade;\nmetadata.trade=msg.params.trade;\nmetadata.tradeType=msg.params.tradeType;\nmetadata.sequence=msg.params.sequence;\n\nmsg={};\nmsg.params={};\nmsg.method=\"tradePrep\";\n// var stopLoss=      \n// var takeProfit=\n// var tradeSize=\n\nmsg.params.limit=total/40; \nmsg.params.leverage=parseFloat(leverage); \nmsg.params.tradeSize=parseFloat(total*(tradeSize)/100).toFixed(2); \nmsg.params.takeProfit=parseFloat(msg.params.tradeSize*(takeProfit)/100).toFixed(2); \nmsg.params.stopLoss=parseFloat(msg.params.tradeSize*(stopLoss)/100).toFixed(2);\nmsg.params.total=total; \n\nmsg.params.queueDelay=parseInt(metadata.ss_queueDelay);\nmsgType=\"RPC_CALL_FROM_SERVER_TO_DEVICE\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+        "jsScript" : "\n\nvar total=parseFloat(metadata.total); \nvar tradeSize=parseFloat(msg.params.tradeSizePC);\nvar stopLoss=msg.params.stopLossPC;\nvar takeProfit=msg.params.takeProfitPC;\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nvar strategy=msg.params.strategy;\n\nmetadata.trade=msg.params.trade;\nmetadata.tradeType=msg.params.tradeType;\nmetadata.sequence=parseInt(msg.params.sequence);\n\nmsg={};\nmsg.params={};\nmsg.method=\"tradePrep\";\n// var stopLoss=      \n// var takeProfit=\n// var tradeSize=\n\nmsg.params.limit=total/40; \nmsg.params.leverage=leverage; \nmsg.params.tradeSize=((total*tradeSize)/100).toFixed(2); \nmsg.params.takeProfit=(msg.params.tradeSize*(takeProfit)/100).toFixed(2); \nmsg.params.stopLoss=(msg.params.tradeSize*(stopLoss)/100).toFixed(2);\nmsg.params.total=total; \nmsg.params.strategy=strategy; \n\n// msg.params.queueDelay=parseInt(metadata.ss_queueDelay);\nmsgType=\"RPC_CALL_FROM_SERVER_TO_DEVICE\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
       },
       "createdTime" : 0,
       "debugMode" : true,
@@ -523,11 +519,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1957,
-        "layoutY" : 483
+        "layoutX" : 1498,
+        "layoutY" : 440
       },
       "configuration" : {
-        "queueName" : "SequentialByOriginator"
+        "queueName" : "Traders"
       },
       "createdTime" : 0,
       "debugMode" : false,

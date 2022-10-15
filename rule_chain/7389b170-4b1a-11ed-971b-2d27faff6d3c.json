@@ -32,7 +32,7 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 3,
-      "toIndex" : 2,
+      "toIndex" : 32,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
@@ -146,6 +146,10 @@
       "fromIndex" : 31,
       "toIndex" : 12,
       "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 2,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 3,
     "nodes" : [ {
@@ -198,8 +202,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 494,
-        "layoutY" : 309
+        "layoutX" : 578,
+        "layoutY" : 316
       },
       "configuration" : {
         "version" : 0
@@ -936,6 +940,28 @@
       "name" : "Weak sell",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 390,
+        "layoutY" : 201
+      },
+      "configuration" : {
+        "fieldsMapping" : {
+          "name" : "originatorName",
+          "type" : "originatorType"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "117c7850-4ccd-11ed-84ff-91e3a93d7908"
+      },
+      "name" : "fields",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetOriginatorFieldsNode"
     } ],
     "ruleChainConnections" : null
   },
