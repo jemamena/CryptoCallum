@@ -1,0 +1,946 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1665681249799,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "73b75120-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7389b170-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "name" : "BS_brain",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 2,
+      "toIndex" : 4,
+      "type" : "RPC Request from Device"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 6,
+      "type" : "RPC Request to Device"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "tradePrep"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 7,
+      "type" : "replies"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 11,
+      "type" : "tradePrep"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 1,
+      "type" : "tradeDone"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 16,
+      "type" : "tradeDone"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 24,
+      "type" : "tradeDone"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 20,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 21,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 18,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 23,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 26,
+      "type" : "E_Buy"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 27,
+      "type" : "E_Sell"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 28,
+      "type" : "N_Buy"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 29,
+      "type" : "N_Sell"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 30,
+      "type" : "W_Buy"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 31,
+      "type" : "W_Sell"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 12,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 3,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 856,
+        "layoutY" : 1025
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ENTITY_VIEW" ]
+          } ]
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b6b4e0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "To sequences",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1299,
+        "layoutY" : 673
+      },
+      "configuration" : {
+        "timeoutInSeconds" : 60
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b6dbf0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "tradeReady to brain",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCRequestNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 494,
+        "layoutY" : 309
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b70300-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Message Type Switch",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 209,
+        "layoutY" : 307
+      },
+      "configuration" : {
+        "persistAlarmRulesState" : false,
+        "fetchAlarmRulesStateOnStart" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b75120-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Device Profile Node",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 870,
+        "layoutY" : 225
+      },
+      "configuration" : {
+        "jsScript" : "var method=msg.method;\n\n\nreturn[method, 'replies'];\n\n// function nextRelation(metadata, msg) {\n//     return ['one','nine'];\n// }\n// if(method === 'tradePrep') {\n//     return ['tradePrep'];\n// }\n// return nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b8b0b0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "filter methods",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1297,
+        "layoutY" : 319
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "DEVICE" ]
+          } ]
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73b94cf0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "change to traders",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 877,
+        "layoutY" : 396
+      },
+      "configuration" : {
+        "jsScript" : "var method=msg.method;\n\n\nreturn[method, 'replies'];\n\n// function nextRelation(metadata, msg) {\n//     return ['one','nine'];\n// }\n// if(method === 'tradePrep') {\n//     return ['tradePrep'];\n// }\n// return nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73bcf670-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "filter methods",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1167,
+        "layoutY" : 9
+      },
+      "configuration" : {
+        "serviceIdMetaDataAttribute" : "serviceId",
+        "sessionIdMetaDataAttribute" : "sessionId",
+        "requestIdMetaDataAttribute" : "requestId"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73be07e0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Replies",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 825,
+        "layoutY" : 1197
+      },
+      "configuration" : {
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nvar seq={};\n// var seqs=msg;\n// var seqArr=Object.keys(msg); \nif(msg.hasOwnProperty('s1')) {\n    seq=msg.s1;\n    msg={};\n    msg.seq=seq;\n    return ['s1'];\n}\n\n\nreturn nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73be5600-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "separate sequences",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1584,
+        "layoutY" : 386
+      },
+      "configuration" : {
+        "jsScript" : "\n\nmsgType=\"RPC_CALL_FROM_SERVER_TO_DEVICE\";\n\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};\n\n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c003b0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Change RPC to device",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1619,
+        "layoutY" : 17
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\n// details.done=(msg.params.done==false)?\"failed\":\"Success\";\n// details.trader=msg.params.trader;\ndetails.sequence=msg.sequence;\ndetails.tradeType=msg.tradeType;\ndetails.trade=msg.trade;\ndetails.logs=\"New Trade\";\nreturn details;\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : null,
+        "alarmType" : "newTrade",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : null,
+        "propagateToOwnerHierarchy" : null,
+        "propagateToTenant" : null,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c0ee10-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Trade is Ready",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1315,
+        "layoutY" : 132
+      },
+      "configuration" : {
+        "jsScript" : "\n/*    \"method\": \"tradePrep\",\n    \"params\": {\n        \"sequence\": 1,\n        \"tradeSizePC\": 0.06,\n        \"takeProfitPC\": 12,\n        \"stopLossPC\": 12,\n        \"leverage\": 15,\n        \"trade\": \"sell\",\n        \"tradeType\": \"extreme\"\n*/\n  \n//metadata.sequence= msg.params.sequence;\nmsg=msg.params;\n//delete msg.params.sequence;\n\nmsgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c16340-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Prepare Attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 2403,
+        "layoutY" : 215
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c1b160-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Save Timeseries",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 883,
+        "layoutY" : 82
+      },
+      "configuration" : {
+        "jsScript" : "var tradeType=msg.params.tradeType;\n\nmsg={};\n// for (var keys in params)msg[keys]=params[keys];\n// msg.tradeType=tradeType;\n\nmsg.tradeType=tradeType;\n\nmsgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c1ff80-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Prepare Attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 799,
+        "layoutY" : 1141
+      },
+      "configuration" : {
+        "jsScript" : "\nmsg={};\n\nfor (var seqs=0;seqs<8;seqs++){\n    for(var ps=0;ps<16;ps++){\n        var seq='s'+(seqs+1);\n        var pos='p'+(ps+1);\n        if (metadata.hasOwnProperty(seq+pos+\"_name\")) msg[seq+pos+\"_name\"]=metadata[seq+pos+\"_name\"];\n    }\n}\n\nmsgType = \"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c29bc0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "indicator names",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 845,
+        "layoutY" : 1264
+      },
+      "configuration" : {
+        "scope" : "CLIENT_SCOPE",
+        "notifyDevice" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c33800-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "client attributes",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1305,
+        "layoutY" : 460
+      },
+      "configuration" : {
+        "ruleChainId" : "436f1660-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c42260-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "telemetry",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1588,
+        "layoutY" : 304
+      },
+      "configuration" : {
+        "ruleChainId" : "7c01a970-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c47080-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "SC_device",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1619,
+        "layoutY" : 657
+      },
+      "configuration" : {
+        "alarmsCountMappings" : [ {
+          "target" : "tradeDoneBS",
+          "typesList" : [ "tradeDoneBS" ],
+          "severityList" : [ ],
+          "statusList" : [ ]
+        } ],
+        "countAlarmsForPropagationEntities" : false,
+        "propagationEntityTypes" : null,
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c4bea0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "tradeDoneBS",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.alarm.TbAlarmsCountNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1618,
+        "layoutY" : 746
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c50cc0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "count alarms",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1907,
+        "layoutY" : 13
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\nfor (var detail in msg.details){\n    details[detail]=msg.details[detail];\n}\n\n// details.logs=msg.details.logs;\n// details.tradeType=msg.details.tradeType;\n// details.trade=msg.details.trade;\n// details.trader.msg.details.trader;\nreturn details;",
+        "alarmType" : "newTrade"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c5a900-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Clear tradeReady",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1914,
+        "layoutY" : 67
+      },
+      "configuration" : {
+        "alarmsCountMappings" : [ {
+          "target" : "newTrade",
+          "typesList" : [ "newTrade" ],
+          "severityList" : [ ],
+          "statusList" : [ ]
+        } ],
+        "countAlarmsForPropagationEntities" : false,
+        "propagationEntityTypes" : null,
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c69360-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "newTrade",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.alarm.TbAlarmsCountNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2216,
+        "layoutY" : 64
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c77dc0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "count alarms",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1617,
+        "layoutY" : 560
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\nfor (var detail in msg.details){\n    details[detail]=msg.details[detail];\n}\n\n// details.logs=msg.details.logs;\n// details.tradeType=msg.details.tradeType;\n// details.trade=msg.details.trade;\n// details.trader.msg.details.trader;\nreturn details;",
+        "alarmType" : "tradeDoneBS"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c88f30-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "tradeDoneBS",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1304,
+        "layoutY" : 558
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\ndetails.done=(msg.params.done==false)?\"failed\":\"Success\";\ndetails.trader=msg.params.trader;\ndetails.tradeType=metadata.cs_tradeType;\ndetails.trade=metadata.cs_trade;\ndetails.sequence=msg.params.sequence;\ndetails.logs=\"Trade finished: \" + details.done;\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : null,
+        "alarmType" : "tradeDoneBS",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : null,
+        "propagateToOwnerHierarchy" : null,
+        "propagateToTenant" : null,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c92b70-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "tradeDoneBS",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1724,
+        "layoutY" : 200
+      },
+      "configuration" : {
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nif(msg.tradeType==\"extreme\" && msg.trade=='buy') {\n    return ['E_Buy'];\n}\nelse if(msg.tradeType==\"extreme\" && msg.trade=='sell') {\n    return ['E_Sell'];\n}\nif(msg.tradeType==\"neutral\" && msg.trade=='buy') {\n    return ['N_Buy'];\n}\nelse if(msg.tradeType==\"neutral\" && msg.trade=='sell') {\n    return ['N_Sell'];\n}\nif(msg.tradeType==\"neutral\" && msg.trade=='buy') {\n    return ['W_Buy'];\n}\nelse if(msg.tradeType==\"neutral\" && msg.trade=='sell') {\n    return ['W_Sell'];\n}\n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73c9a0a0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "trades",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2066,
+        "layoutY" : 173
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "E_buy",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73cb9c70-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Extreme Buy",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2073,
+        "layoutY" : 248
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "E_sell",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73cc5fc0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Extreme Sell",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2074,
+        "layoutY" : 311
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "N_buy",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73cd4a20-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Neutral Buy",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2076,
+        "layoutY" : 376
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "N_sell",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73ce3480-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Neutral sell",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2072,
+        "layoutY" : 438
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "W_buy",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "HOURS",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73cea9b0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Weak Buy",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2074,
+        "layoutY" : 503
+      },
+      "configuration" : {
+        "inputValueKey" : "tradeType",
+        "outputValueKey" : "W_sell",
+        "mathFunction" : "COUNT",
+        "aggIntervalType" : "HOUR",
+        "timeZoneId" : "Europe/London",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "HOURS",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "HOURS",
+        "statePersistencePolicy" : "PERIODICALLY",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "MINUTES",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "73ced0c0-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "name" : "Weak sell",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
