@@ -1,0 +1,4456 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "For Customer users",
+      "widgets" : {
+        "d90859b0-63ac-0f52-44e9-bdb816a971e8" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "rgba(0,0,0,0.55)",
+            "padding" : "8px",
+            "settings" : {
+              "cardCss" : "\n.menu {\n    display: flex;\n    flex: wrap;\n    flex-direction: row;\n    /*color: #c8c8c8;;*/\n    color: rgb(0,0,0);\n    opacity: 0.55;\n    padding: 1%;\n    /*padding: 1% 0% 20% 5%;*/\n    font-family: Roboto;\n    font-size: 240%;\n}\n.menu div:active{\n    opacity: 0.5;\n}\nhr {\n  margin: 40px 0;\n  /*padding: 1% 1% 1% 0%;*/\n}\n.menu >div {\n    padding: 0% 0% 7% 2%;\n    text-align: center;\n}\na {\n    all: unset;\n    /*padding: 0% 0% 3% 2%;*/\n    /*color: rgba(255,255,255,0.55);*/\n    /*text-decoration: none !important;*/\n    /*color: inherit;*/\n}\n.menu div:hover{\n    opacity: 0.75;\n}\n\n\n    /*width: 100%;*/\n   /*height: 100%;*/\n    /*height: auto;*/\n    /*position: absolute;*/\n    /*margin: 0;*/\n    /*top: 20%;*/\n    /*left: 35%;*/\n    /*transform: translateY(-50%, -50%);*/\n    /*border-radius: 3px;*/\n    /*background-color: #EEEAE9;*/\n    /*border: none;*/\n    /*color: #c8c8c8;;*/\n    /*padding: 1% 0% 0% 0%;*/\n    /*font-family: Roboto;*/\n    /*text-align: center;*/\n    /*vertical-align: centre;*/\n    /*align-items: center;*/\n    /*justify-content: center;*/\n    /*text-decoration: none;*/\n    /*display: inline-block;*/\n    /*font-size: 300%;*/\n    /*margin: 30px 2px;*/\n    /*cursor: pointer;*/\n    /*font-weight: bold;*/\n    /*text-decoration: underline;*/\n/*}*/\n\n\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/",
+              "cardHtml" : "<!--<hr>-->\n<div class=\"menu\" id=\"menu\">\n    <!--<div class='tittle'>${UserName}</div>-->\n    <!--<div class='home' id=\"home\">&nbsp;<i class=\"fa fa-home\"></i>&nbsp; Home</div>-->\n    <!--<div class='users' id=\"users\">&nbsp;<i class=\"fa fa-user\"></i>&nbsp;&nbsp; Users</div>-->\n    <!--<div id=\"settings\" class='settings' tittle=\"Settings\" >&nbsp;<i class=\"fa fa-cog\" ></i>&nbsp;&nbsp;</div>-->\n    <!--<div>&nbsp;<a class=\"settings\" title=\"settings\" placeholder=\"Logout\" id=\"settings\"><i class=\"fa fa-cog\"></i>&nbsp;&nbsp;</a></div>-->\n\n    <!--<div class='desktop' id=\"desktop\"><i class=\"fa fa-desktop\"></i>&nbsp;&nbsp; Desktop view</div>-->\n    <!--<div class=\"logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\" id=\"home\"><i class=\"fa fa-sign-out\"></i> Logout</div>-->\n    <div>&nbsp;<a class=\"logout\" title=\"Logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\"><i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp;</a></div>\n    <!--<div>&nbsp;<a class=\"settings\" title=\"Logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\"><i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp;</a></div>-->\n    <!--<div class=\"logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\">&nbsp;<i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp; Logout</div>-->\n</div>\n<!--<div>-->\n    <!--<h4>${UserName}</h4>-->\n<!--</div>-->\n"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "home",
+                "icon" : "home",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "Home",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "f13189f7-3931-a7b2-8f63-2fb2f2c275ce"
+              }, {
+                "name" : "users",
+                "icon" : "people",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "users",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "4c78574c-dd9e-f1db-8187-7d8821a0c954"
+              }, {
+                "name" : "settings",
+                "icon" : "settings",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "apm_vista_settings",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : true,
+                "dialogTitle" : "Settings",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : 60,
+                "dialogHeight" : 70,
+                "openRightLayout" : false,
+                "id" : "cae001b4-d62c-36c6-ac97-63612a2e7f53"
+              }, {
+                "name" : "desktop",
+                "icon" : "devices_other",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "splash_screen",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "4a66ada0-4c93-11ed-9e7b-9b740bed105d",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "55f83256-3775-8aab-3a7a-8fe0fa6e3b6b"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d90859b0-63ac-0f52-44e9-bdb816a971e8"
+        },
+        "ba4d6e97-ca4e-0488-bf92-ab34c48d87a0" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(72,72,72,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardCss" : "/*.tittle{*/\n/*    opacity: 0.7;*/\n/*}*/\n\ndiv {\n    opacity: 0.9;\n    position: relative;\n    /*top: -4px;*/\n    /*right: -5px;*/\n    /*position: relative;*/\n    /*padding: 0% 10% 20% 0%;*/\n    /*object-fit: contain;*/\n    /*max-width: 80%;*/\n    /*height: 0.5vh;*/\n    /*max-width:100%;*/\n    max-width:80%;\n    max-height:80%;\n    background-size: cover;\n    /*display: flex;*/\n    /*border-radius: 3px;*/\n    /*background-color: #EEEAE9;*/\n    /*border: none;*/\n    /*color: #000000;*/\n    /*padding: 10px 10px 10px 10px;*/\n    /*font-family: Roboto;*/\n    align-items: right;\n    /*justify-content: center;*/\n    /*text-align: center;*/\n    /*text-decoration: none;*/\n    /*display: inline-block;*/\n    font-size: 0.7vw;\n    /*margin: 5px 5px;*/\n    /*cursor: pointer;*/\n    /*font-weight: 500;*/\n    /*text-decoration: underline;*/\n    \n\n}\n\ndiv:hover {\n   opacity: 1; \n}\na {\n    /*opacity: 0.8;*/\n    /*position: relative;*/\n    /*padding: 0% 10% 20% 0%;*/\n    all: unset;\n    /*padding: 0% 0% 3% 2%;*/\n    /*color: rgba(255,255,255,0.55);*/\n    /*text-decoration: none !important;*/\n    /*color: inherit;*/\n}\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/",
+              "cardHtml" : "\n<div>\n    <!--<img src=\"https://trumeter.com/images/iot/trumeter-30-grey3.png\" width=\"440\" height=\"180\" alt=\"trumeter\">-->\n    <a href=\"https://matt-e.co.uk/\" target=\"_blank\"><img src=\"https://trumeter.com/images/iot/matte-dash-logo.png\" width=\"230\" height=\"75\" alt=\"trumeter\"></a>\n    <!--<div id='button' class='card'>test</div>-->\n</div>"
+            },
+            "title" : "logo",
+            "dropShadow" : false,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ba4d6e97-ca4e-0488-bf92-ab34c48d87a0"
+        },
+        "1cc08cb3-b2ab-190d-4112-2255aec6523c" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardCss" : "/*.tittle{*/\n/*    opacity: 0.7;*/\n/*}*/\n\ndiv {\n    opacity: 0.5;\n    padding-right: -5%;\n    /*object-fit: contain;*/\n    /*max-width: 80%;*/\n    /*height: 0.5vh;*/\n    /*max-width:100%;*/\n    max-width:80%;\n    max-height:80%;\n    background-size: cover;\n    /*display: flex;*/\n    /*border-radius: 3px;*/\n    /*background-color: #EEEAE9;*/\n    /*border: none;*/\n    /*color: #000000;*/\n    /*padding: 10px 10px 10px 10px;*/\n    /*font-family: Roboto;*/\n    align-items: right;\n    /*justify-content: center;*/\n    /*text-align: center;*/\n    /*text-decoration: none;*/\n    /*display: inline-block;*/\n    font-size: 0.7vw;\n    /*margin: 5px 5px;*/\n    /*cursor: pointer;*/\n    /*font-weight: 500;*/\n    /*text-decoration: underline;*/\n    \n\n}\n\ndiv:hover {\n   /*opacity: 1; */\n}\na {\n    all: unset;\n    /*padding: 0% 0% 3% 2%;*/\n    /*color: rgba(255,255,255,0.55);*/\n    /*text-decoration: none !important;*/\n    /*color: inherit;*/\n}\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/",
+              "cardHtml" : "\n<div>\n    <!--<img src=\"https://trumeter.com/images/iot/trumeter-30-grey3.png\" width=\"440\" height=\"180\" alt=\"trumeter\">-->\n    <a href=\"https://matt-e.co.uk/\" target=\"_blank\"><img src=\"https://trumeter.com/images/iot/matte_logo-BW.png\" width=\"100\" height=\"50\" alt=\"trumeter\"></a>\n    <!--<div id='button' class='card'>test</div>-->\n</div>"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : false,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "1cc08cb3-b2ab-190d-4112-2255aec6523c"
+        },
+        "e98d562c-4e1d-4cd4-8e21-83094ea1e4ad" : {
+          "isSystemType" : true,
+          "bundleAlias" : "entity_admin_widgets",
+          "typeAlias" : "device_admin_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "#414042",
+            "padding" : "0px",
+            "settings" : {
+              "enableSearch" : false,
+              "displayPagination" : false,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "Name",
+              "displayEntityName" : false,
+              "displayEntityType" : false,
+              "entitiesTitle" : "DEVICE LIST",
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : false,
+              "enableStickyAction" : false,
+              "entityNameColumnTitle" : "Device Name",
+              "displayEntityLabel" : false,
+              "useRowStyleFunction" : true,
+              "rowStyleFunction" : "result = {background:\"\"};\r\nif (entity.active == \"true\") {\r\n   result.background = \"#cef8d3\";\r\n}else result.background=\"red\";\r\n//   result.text = \"black\";\r\n// } else if (entity.status == \" ON\") {\r\n//   result.background = \"green\";\r\n// }\r\n// else if (entity.status == \"OFF\") {\r\n//   result.background = \"grey\";\r\n// }\r\n// else if (entity.status == \"\") {\r\n//   result.background = \"\";\r\n// }\r\nreturn result;",
+              "entityLabelColumnTitle" : " "
+            },
+            "title" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 500,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "012d3898-48e9-2a71-de71-aba4957f4420",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "active",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "10px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "disabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.8342583543550575,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "label",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "50px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.5775589584218943,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "devices_other",
+            "iconColor" : "#414042",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "fontSize" : "5px",
+              "fontWeight" : 400
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ ],
+              "actionCellButton" : [ ],
+              "rowClick" : [ {
+                "name" : "device state",
+                "icon" : "more_horiz",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : null,
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "id" : "9d0e80cc-97f7-116b-e160-57a663671bc8"
+              } ]
+            },
+            "enableDataExport" : false,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "e98d562c-4e1d-4cd4-8e21-83094ea1e4ad"
+        },
+        "a50cd1f0-3741-d304-4f77-d4946a9e55bb" : {
+          "isSystemType" : true,
+          "bundleAlias" : "alarm_widgets",
+          "typeAlias" : "alarms_table",
+          "type" : "alarm",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 7200000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgba(240,240,240,0.9)",
+            "color" : "#000000",
+            "padding" : "4px",
+            "settings" : {
+              "alarmsTitle" : "TRADES LOG",
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : false,
+              "enableFilter" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayDetails" : false,
+              "allowAcknowledgment" : true,
+              "allowClear" : false,
+              "displayPagination" : false,
+              "defaultSortOrder" : "-createdTime",
+              "useRowStyleFunction" : false
+            },
+            "title" : "New Alarms table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 500,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Time",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.11619005491701229,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.sequence",
+                "type" : "alarm",
+                "label" : "Sequence",
+                "color" : "#ffc107",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.9515848858460949,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.logs",
+                "type" : "alarm",
+                "label" : "Details",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.4783683625817763,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.trade",
+                "type" : "alarm",
+                "label" : "Trade",
+                "color" : "#4caf50",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.5006776928165562,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.tradeType",
+                "type" : "alarm",
+                "label" : "Type",
+                "color" : "#f44336",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.8974397768985938,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            },
+            "alarmSearchStatus" : "ANY",
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : true,
+            "titleIcon" : "notifications_active",
+            "iconColor" : "#ffffff",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : {
+              "actionCellButton" : [ ]
+            },
+            "alarmStatusList" : [ "ACTIVE", "CLEARED", "UNACK" ],
+            "alarmSeverityList" : [ ],
+            "alarmTypeList" : [ "tradeExec", "tradePrep", "tradeReady", "tradeDone" ],
+            "searchPropagatedAlarms" : false,
+            "datasources" : [ ],
+            "enableDataExport" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "a50cd1f0-3741-d304-4f77-d4946a9e55bb"
+        },
+        "23995584-090a-8118-4c4a-a651dda47c9d" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "total",
+                "type" : "timeseries",
+                "label" : "total",
+                "color" : "#21f33f",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : true,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 6,
+                  "showPointsRadius" : 4,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.5535685476895893,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 36000000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 1000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#efe9e9",
+            "color" : "#0c0c0c",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#0c0b0b"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#232323",
+                "tickDecimals" : 1,
+                "min" : 32000,
+                "max" : 34000
+              },
+              "grid" : {
+                "color" : "#101010",
+                "tickColor" : "#807c7c",
+                "verticalLines" : false,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "backgroundColor" : "rgba(0, 0, 0, 0.16)"
+              },
+              "stack" : false,
+              "tooltipIndividual" : false,
+              "timeForComparison" : "previousInterval",
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "showLabels" : true
+              },
+              "smoothLines" : false,
+              "comparisonEnabled" : false,
+              "showTooltip" : true,
+              "customLegendEnabled" : false,
+              "dataKeysListForLabels" : [ {
+                "type" : "timeseries",
+                "name" : "alarm0",
+                "settings" : { }
+              } ]
+            },
+            "title" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "showLegend" : false,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "23995584-090a-8118-4c4a-a651dda47c9d"
+        },
+        "09405200-61b7-49e1-42e6-b64695368796" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_value_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "alarmPriority",
+                "type" : "attribute",
+                "label" : "alarmName",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.695500705300357,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "status",
+                "type" : "attribute",
+                "label" : "status",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.3710130422045679,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "var result=(value==\"ALARM\")?\"rgba(200,50,50,0.8)\":\"rgba(0,0,0,0)\";\nreturn result;\n\n// rgba(200,0,0,0.6)\n\n// \"rgba(200,50,50,0.6)\""
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(90,90,90,0.7)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<style>\n    .alarm1 {\n        background-color: ${status};\n    }\n</style>\n<div class=\"all\">\n    <!--<div class='alarm1'>${DI1name}</div>-->\n    <div class='alarm1'>${alarmName}</div>\n</div>\n   ",
+              "cardCss" : ".alarm1 {\n    font-size: 90%;\n    color: white;\n    font-weight: 600;\n    text-align: center;\n    vertical-align: center;\n    padding: 2% 0% 5% 0%;\n    /*width:110%;*/\n    /*height:25%;#*/\n    /*position: absolute;*/\n    /*bottom: 0;*/\n    /*left: 0;*/\n    /*position: relative;*/\n    /*margin-top:4%;*/\n    \n}\n"
+            },
+            "title" : "Alarm",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "09405200-61b7-49e1-42e6-b64695368796"
+        },
+        "7659b043-aec4-ab4e-b93f-9e75c7960e51" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "rgba(255,255,255,0.55)",
+            "padding" : "8px",
+            "settings" : {
+              "cardCss" : "\n.menu {\n    display: flex;\n    flex: wrap;\n    flex-direction: row;\n    /*color: #c8c8c8;;*/\n    color: rgb(147,149,152);\n    /*opacity: 0.55;*/\n    padding: 1%;\n    /*padding: 1% 0% 20% 5%;*/\n    font-family: Roboto;\n    font-size: 240%;\n}\n.menu div:active{\n    opacity: 0.5;\n}\nhr {\n  margin: 40px 0;\n  /*padding: 1% 1% 1% 0%;*/\n}\n.menu >div {\n    padding: 0% 0% 7% 2%;\n    text-align: center;\n}\na {\n    all: unset;\n    /*padding: 0% 0% 3% 2%;*/\n    /*color: rgba(255,255,255,0.55);*/\n    /*text-decoration: none !important;*/\n    /*color: inherit;*/\n}\n.menu div:hover{\n    opacity: 0.75;\n}\n\n\n    /*width: 100%;*/\n   /*height: 100%;*/\n    /*height: auto;*/\n    /*position: absolute;*/\n    /*margin: 0;*/\n    /*top: 20%;*/\n    /*left: 35%;*/\n    /*transform: translateY(-50%, -50%);*/\n    /*border-radius: 3px;*/\n    /*background-color: #EEEAE9;*/\n    /*border: none;*/\n    /*color: #c8c8c8;;*/\n    /*padding: 1% 0% 0% 0%;*/\n    /*font-family: Roboto;*/\n    /*text-align: center;*/\n    /*vertical-align: centre;*/\n    /*align-items: center;*/\n    /*justify-content: center;*/\n    /*text-decoration: none;*/\n    /*display: inline-block;*/\n    /*font-size: 300%;*/\n    /*margin: 30px 2px;*/\n    /*cursor: pointer;*/\n    /*font-weight: bold;*/\n    /*text-decoration: underline;*/\n/*}*/\n\n\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/",
+              "cardHtml" : "<!--<hr>-->\n<div class=\"menu\" id=\"menu\">\n    <!--<div class='tittle'>${UserName}</div>-->\n    <!--<div class='home' id=\"home\">&nbsp;<i class=\"fa fa-home\"></i>&nbsp; Home</div>-->\n    <!--<div class='users' id=\"users\">&nbsp;<i class=\"fa fa-user\"></i>&nbsp;&nbsp; Users</div>-->\n    <div id=\"settings\" class='settings' tittle=\"Settings\" >&nbsp;<i class=\"fa fa-cog\" ></i>&nbsp;&nbsp;</div>\n    <!--<div>&nbsp;<a class=\"settings\" title=\"settings\" placeholder=\"Logout\" id=\"settings\"><i class=\"fa fa-cog\"></i>&nbsp;&nbsp;</a></div>-->\n\n    <!--<div class='desktop' id=\"desktop\"><i class=\"fa fa-desktop\"></i>&nbsp;&nbsp; Desktop view</div>-->\n    <!--<div class=\"logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\" id=\"home\"><i class=\"fa fa-sign-out\"></i> Logout</div>-->\n    <div>&nbsp;<a class=\"logout\" title=\"Logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\"><i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp;</a></div>\n    <!--<div>&nbsp;<a class=\"settings\" title=\"Logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\"><i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp;</a></div>-->\n    <!--<div class=\"logout\" href=\"https://cloud.trumeter.com/login\" placeholder=\"Logout\">&nbsp;<i class=\"fa fa-sign-out\"></i>&nbsp;&nbsp; Logout</div>-->\n</div>\n<!--<div>-->\n    <!--<h4>${UserName}</h4>-->\n<!--</div>-->\n"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "home",
+                "icon" : "home",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "Home",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "f13189f7-3931-a7b2-8f63-2fb2f2c275ce"
+              }, {
+                "name" : "users",
+                "icon" : "people",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "users",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "4c78574c-dd9e-f1db-8187-7d8821a0c954"
+              }, {
+                "name" : "settings",
+                "icon" : "settings",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "iot_router_settings",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : true,
+                "dialogTitle" : "Settings",
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : 35,
+                "dialogHeight" : 50,
+                "openRightLayout" : false,
+                "id" : "cae001b4-d62c-36c6-ac97-63612a2e7f53"
+              }, {
+                "name" : "desktop",
+                "icon" : "devices_other",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "splash_screen",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "4a66ada0-4c93-11ed-9e7b-9b740bed105d",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "55f83256-3775-8aab-3a7a-8fe0fa6e3b6b"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "7659b043-aec4-ab4e-b93f-9e75c7960e51"
+        },
+        "ff30debe-926b-5c10-8883-6e1940598b34" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_value_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "total",
+                "type" : "timeseries",
+                "label" : "value",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.9025115134297339,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "profit",
+                "type" : "timeseries",
+                "label" : "profit",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.4604690141428245
+              }, {
+                "name" : "profitHr",
+                "type" : "timeseries",
+                "label" : "profitHr",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.07183517258877581
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,230,230,0.7)",
+            "color" : "#1a9927",
+            "padding" : "0px",
+            "settings" : {
+              "cardCss" : ".all{\n   display: flex;\n   flex-wrap: wrap;\n   flex-direction: column;\n   justify-content: space-between;\n   /*height: 50%;*/\n   /*padding-bottom: -2%*/\n}\n.hrtop{\n    vertical-align: text-top;\n    /*padding-top:0%;*/\n     border: none;\n    /*border-top: 0.1px solid white;*/\n    background-color: \"#43854a\";\n    /*height:10px;*/\n    height:5%;\n    size:0px;\n    color: \"#43854a\";\n    position: relative;\n    /*margin-right: -1%;*/\n    margin-top: -2.5%;\n    /*z-index: 999;*/\n}\n\n.AI {\n   font-family: Arial;\n   display: flex;\n   flex-wrap: wrap;\n   flex-direction: column;\n   justify-content: flex-start;\n   width: 100%;\n   height: 76%;\n   /*height: auto;*/\n   padding: 3% 5% 0% 5%;\n   /*border: 2px solid #ccc;*/\n   /*box-sizing: border-box;*/\n   /*color: #ffd200;*/\n   \n}\n.tittle{\n    text-transform: uppercase;\n    text-overflow: ellipsis;\n    overflow: hidden;\n    white-space: nowrap;\n    /*width:100%;*/\n    color: #000000;\n    /*font-size: 30px;*/\n    font-size: 140%;\n    font-weight: 500;\n    text-align: left;\n    padding: 1% 2% 0% 0%;\n    /*margin: 0;*/\n    /*padding-bottom: 10px;*/\n    /*line-height: 32px;*/\n}\nhr{\n    border: none;\n    /*border-top: 0.1px solid white;*/\n    background-color: black;\n    height: 1px;\n    /*color: white;*/\n    /*size:1px;*/\n}\n\n/*i{*/\n    /*margin-bottom: 10px;*/\n/*    vertical-align: text-top;*/\n/*    font-size: 1.55vw;*/\n/*}*/\n.value {\n    padding: 0% 0% 0% 1%;\n    /*font-size: 68px;*/\n    font-size: 370%;\n    font-weight: 400;\n    /*color: #3dd3aa;*/\n    text-align: left;\n    vertical-align: top;\n}\n.unit {\n    /*text-overflow: ellipsis;*/\n    overflow: hidden;\n    white-space: nowrap;\n    /*font-size: 30px;*/\n    font-size: 140%;\n    text-align: left;\n    vertical-align: bottom;\n    font-weight: 300;\n    padding: 0% 0% 0% 3%;\n    /*padding-right: ;*/\n    /*color: #3dd3aa;*/\n}\n/*.bottom{*/\n/*    font-family: Arial;*/\n/*    display: flex;*/\n/*    flex-direction: column;*/\n/*    justify-content:flex-start;*/\n    \n/*}*/\n.unitranges{\n    display: flex;\n    flex-direction: row;\n    justify-content:space-between;\n    padding:0% 3% 0% 0%;\n    /*align-items: right;*/\n}\n.ranges {\n    /*text-overflow: ellipsis;*/\n    overflow: hidden;\n    white-space: nowrap;\n    /*padding: 0% 0% 0% 0%;*/\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    color: #cccccc;\n    /*font-size: 30px;*/\n    font-size: 80%;\n    text-align: left;\n    /*color: #FFD200;*/\n    font-weight: 450;\n    /*display: table-cell;*/\n    /*vertical-align: text-bottom;*/\n    /*align-self: flex-end;*/\n    /*position: relative; */\n    /*top: -50%;*/\n}\n.alarm2 {\n    font-size: 120%;\n    color: white;\n    font-weight: 600;\n    /*text-align: right;*/\n    vertical-align: text-top;\n    padding: 5% 0% 7% 35%;\n    width:110%;\n    height:25%;#\n    /*position: absolute;*/\n    /*bottom: 0;*/\n    /*left: 0;*/\n    position: relative;\n    margin-top:4%;\n    \n}\n\n\n\n\n\n/*.all{*/\n/*   display: flex;*/\n/*   flex-wrap: wrap;*/\n/*   flex-direction: column;*/\n/*   justify-content: space-between;*/\n   /*height: 50%;*/\n   /*padding-bottom: -2%*/\n   /*padding: 3%;*/\n/*}*/\n/*.hrtop{*/\n/*    vertical-align: text-top;*/\n    /*padding-top:0%;*/\n/*     border: none;*/\n    /*border-top: 0.1px solid white;*/\n/*    background-color: #ffd200;*/\n    /*height:10px;*/\n/*    height:5%;*/\n/*    size:0px;*/\n/*    color: #4987d3;*/\n/*    position: relative;*/\n    /*margin-right: -1%;*/\n/*    margin-top: -4.5%;*/\n    /*z-index: 999;*/\n/*}*/\n\n/*.APMvalue {*/\n/*   font-family: Arial;*/\n/*   display: flex;*/\n/*   flex-wrap: wrap;*/\n/*   flex-direction: column;*/\n/*   justify-content: flex-start;*/\n/*   width: 100%;*/\n/*   height: 76%;*/\n   /*height: auto;*/\n/*   padding: 3% 5% 0% 5%;*/\n   /*border: 2px solid #ccc;*/\n   /*box-sizing: border-box;*/\n   /*color: #ffd200;*/\n   \n/*}*/\n/*.tittle{*/\n/*    text-transform: uppercase;*/\n/*    text-overflow: ellipsis;*/\n/*    overflow: hidden;*/\n/*    white-space: nowrap;*/\n    /*width:100%;*/\n/*    color: #ffffff;*/\n    /*font-size: 30px;*/\n/*    font-size: 140%;*/\n/*    font-weight: 500;*/\n/*    text-align: left;*/\n/*    padding: 1% 2% 0% 0%;*/\n    /*margin: 0;*/\n    /*padding-bottom: 10px;*/\n    /*line-height: 32px;*/\n/*}*/\n\n/*.totalvalue_tittle{*/\n/*    text-transform: uppercase;*/\n/*    text-overflow: ellipsis;*/\n/*    overflow: hidden;*/\n/*    white-space: nowrap;*/\n    /*width:100%;*/\n/*    color: #ffffff;*/\n    /*font-size: 30px;*/\n/*    font-size: 100%;*/\n/*    font-weight: 600;*/\n/*    text-align: left;*/\n/*    padding: 2% 2% 0% 0%;*/\n    /*margin: 0;*/\n    /*padding-bottom: 10px;*/\n    /*line-height: 32px;*/\n/*}*/\n\n/*hr{*/\n/*    border: none;*/\n    /*border-top: 0.1px solid white;*/\n/*    background-color: white;*/\n/*    height: 1px;*/\n    /*color: white;*/\n    /*size:1px;*/\n/*}*/\n\n/*i{*/\n    /*margin-bottom: 10px;*/\n/*    vertical-align: text-top;*/\n/*    font-size: 1.55vw;*/\n/*}*/\n/*.value {*/\n/*    padding: 0% 0% 0% 1%;*/\n    /*font-size: 68px;*/\n/*    font-size: 400%;*/\n/*    font-weight: 400;*/\n    /*color: #3dd3aa;*/\n/*    text-align: left;*/\n/*    vertical-align: top;*/\n/*}*/\n\n/*.totalvalue {*/\n/*    padding: 0% 0% 0% 1%;*/\n    /*font-size: 68px;*/\n/*    font-size: 320%;*/\n/*    font-weight: 400;*/\n    /*color: #3dd3aa;*/\n/*    text-align: left;*/\n/*    vertical-align: top;*/\n/*}*/\n\n/*.unit {*/\n    /*text-overflow: ellipsis;*/\n/*    overflow: hidden;*/\n/*    white-space: nowrap;*/\n    /*font-size: 30px;*/\n/*    font-size: 160%;*/\n/*    text-align: left;*/\n/*    vertical-align: bottom;*/\n/*    font-weight: 300;*/\n/*    padding: 1% 0% 1% 3%;*/\n    /*padding-right: ;*/\n    /*color: #3dd3aa;*/\n/*}*/\n/*.bottom{*/\n/*    font-family: Arial;*/\n/*    display: flex;*/\n/*    flex-direction: column;*/\n/*    justify-content:flex-start;*/\n    \n/*}*/\n/*.unitranges{*/\n/*    display: flex;*/\n/*    flex-direction: row;*/\n/*    justify-content:flex-end;*/\n/*    padding:0% 3% 10% 0%;*/\n/*    align-items: right;*/\n/*}*/\n/*.ranges {*/\n    /*text-overflow: ellipsis;*/\n/*    overflow: hidden;*/\n/*    white-space: nowrap;*/\n    /*padding: 0% 0% 0% 0%;*/\n/*    display: flex;*/\n/*    flex-direction: column;*/\n/*    justify-content: flex-start;*/\n/*    color: #cccccc;*/\n    /*font-size: 30px;*/\n/*    font-size: 90%;*/\n/*    text-align: left;*/\n    /*color: #FFD200;*/\n/*    font-weight: 450;*/\n    /*display: table-cell;*/\n    /*vertical-align: text-bottom;*/\n    /*align-self: flex-end;*/\n    /*position: relative; */\n    /*top: -50%;*/\n/*}*/\n/*.alarm2 {*/\n/*    font-size: 120%;*/\n/*    color: white;*/\n/*    font-weight: 600;*/\n    /*text-align: right;*/\n/*    vertical-align: text-top;*/\n/*    padding: 5% 0% 7% 35%;*/\n/*    width:110%;*/\n/*    height:25%;*/\n    /*position: absolute;*/\n    /*bottom: 0;*/\n    /*left: 0;*/\n/*    position: relative;*/\n/*    margin-top:4%;*/\n    \n/*}*/\n\n",
+              "cardHtml" : "<style>\n    .alarm2 {\n        background-color: ${DI1};\n    }\n</style>\n<div class=\"all\">\n    <div class=\"hrtop\"><hr size=5px/></div>\n    <div class='AI'>\n        <div>\n            <div ><hr size=1px/></div> \n        </div>\n        <div class=\"tittle\"> Total</div>\n\n        <div class='value'>${value}</div>\n        <div class=\"tittle\"> Profit</div>\n\n        <div class='value'>${profit}</div>\n        <div class=\"tittle\"> Profit hour</div>\n        <div class='value'>${profitHr}</div>\n        \n    </div>\n    <!--<div class='alarm2'>${DI2name}</div>-->\n</div>\n    \n    \n    <!--</div>    -->\n    <!--<div class='description'>-->\n    <!--    Value description text-->\n    <!--</div>-->\n<!--</div>-->\n<!--<img height=\"80px\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzIwIiB3aWR0aD0iMzIwIj48ZyBzdHJva2Utd2lkdGg9IjI4Ij48ZyBmaWxsPSIjMzA1NjgwIiBjb2xvcj0iIzAwMCIgd2hpdGUtc3BhY2U9Im5vcm1hbCI+PHBhdGggc3R5bGU9InRleHQtZGVjb3JhdGlvbi1jb2xvcjojMDAwO2lzb2xhdGlvbjphdXRvO21peC1ibGVuZC1tb2RlOm5vcm1hbDtibG9jay1wcm9ncmVzc2lvbjp0Yjt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO3RleHQtZGVjb3JhdGlvbi1zdHlsZTpzb2xpZDt0ZXh0LWluZGVudDowO3RleHQtdHJhbnNmb3JtOm5vbmUiIGQ9Ik0xNTEuMTMgMGMtMjguMzYzIDAtNTQuOTE1IDcuOTE1LTc3LjYxMyAyMS41MzdhMzYuNTc4IDM2LjU3OCAwIDAgMC0yMy4wNjctOC4xOTQgOC43NjYgOC43NjYgMCAwIDAtLjAwNCAwYy0yMC4xNTQuMDAxLTM2LjY3OSAxNi41MjgtMzYuNjc4IDM2LjY4MmE4Ljc2NiA4Ljc2NiAwIDAgMCAwIC4wMSAzNi42OSAzNi42OSAwIDAgMCA4LjEwNCAyMi45MjhjLTEzLjgzIDIyLjgzLTIxLjg3IDQ5LjU4LTIxLjg3IDc4LjE3YTguNzY2IDguNzY2IDAgMSAwIDE3LjUzIDBjMC0yNC43MDIgNi43Mi00Ny43NDggMTguMzc5LTY3LjU3NCA0LjU2NiAxLjk4NSA5LjQ3MiAzLjE1IDE0LjUxOSAzLjE1N2E4Ljc2NiA4Ljc2NiAwIDAgMCAuMDEyIDBjMjAuMTU1IDAgMzYuNjgzLTE2LjUyNyAzNi42ODItMzYuNjgyYTguNzY2IDguNzY2IDAgMCAwIDAtLjAwNGMtLjAwMS01LTEuMTM4LTkuODYzLTMuMDgzLTE0LjM5NyAxOS43MTctMTEuNDg0IDQyLjU4NS0xOC4wOTUgNjcuMDg1LTE4LjA5NWE4Ljc2NiA4Ljc2NiAwIDEgMCAwLTE3LjUzek01MC40NCAzMC44OGM1LjkxMy4wMDIgMTEuMTkxIDIuNTEyIDE0LjgzNiA3LjA3N2E4Ljc2NiA4Ljc2NiAwIDAgMCAuMTgzLjIxNCAxOS4xMzcgMTkuMTM3IDAgMCAxIDQuMTM0IDExLjg2M2MtLjAwMiAxMC42NzctOC40NjggMTkuMTQ0LTE5LjE0NCAxOS4xNDhhMTkuMTQ1IDE5LjE0NSAwIDAgMS0xMi00LjI1NCA4Ljc2NiA4Ljc2NiAwIDAgMC0uMDEzLS4wMSAxOS4xMzYgMTkuMTM2IDAgMCAxLTcuMTQ0LTE0Ljg5MmMuMDAzLTEwLjY3NyA4LjQ3LTE5LjE0NCAxOS4xNDgtMTkuMTQ2eiIvPjxwYXRoIHN0eWxlPSJ0ZXh0LWRlY29yYXRpb24tY29sb3I6IzAwMDtpc29sYXRpb246YXV0bzttaXgtYmxlbmQtbW9kZTpub3JtYWw7YmxvY2stcHJvZ3Jlc3Npb246dGI7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTt0ZXh0LWRlY29yYXRpb24tc3R5bGU6c29saWQ7dGV4dC1pbmRlbnQ6MDt0ZXh0LXRyYW5zZm9ybTpub25lIiBkPSJNNjYuOTkyIDEwMi44M2E4LjE4NyA4LjE4NyAwIDAgMC0yLjI1OCA2LjA3MSA4LjYwNCA4LjYwNCAwIDAgMCAyLjMzOCA1LjUxOGM2LjgwNSA2Ljg1NiAyMC4yMjMgMjAuMjIzIDIwLjIyMyAyMC4yMjNsMTEuODQ0LTExLjgzcy0xMi45NzMtMTIuOTYxLTIwLjE3Ni0yMC4xNzFjLTEuNjA0LTEuNjMyLTMuNzUtMi4zMTQtNi4wMTItMi4zMjRhOC4xNSA4LjE1IDAgMCAwLTUuOTYgMi41MTJ6bTMyLjE0NyAxOS45ODNMNjIuNSAxNTkuNDUyYy0zLjk3NSAzLjk3Ni0zLjk3NSAxMC40MjEgMCAxNC4zOTdsMTguMTU2IDE4LjE1NiAzMS43NTMgMzEuNzUzIDMwLjQ3OCAzMC40NzhjMy45NzYgMy45NzYgMTAuNDIyIDMuOTc2IDE0LjM5OCAwbDI0Ljc5MS0yNC43OTEgMzcuOTE0LTM3LjkxNCAzNi42MzktMzYuNjM5YzMuOTc1LTMuOTc2IDMuOTc1LTEwLjQyMiAwLTE0LjM5OGwtMTguNjMtMTguNjMtMzEuNzUtMzEuNzYtMzAuMDEtMzBjLTMuOTc3LTMuOTc1LTEwLjQyMi0zLjk3NS0xNC4zOTggMGwtMjQuNzkgMjQuNzktMzcuOTEgMzcuOTF6bTM3LjkxMS0zNy45MXMtMTIuOTczLTEyLjk2MS0yMC4xNzYtMjAuMTcxYy0xLjYwNC0xLjYzMi0zLjc1LTIuMzE0LTYuMDEyLTIuMzI0LTQuNzE3LS4wMjMtOC40MzQgMy44NjEtOC4yMTcgOC41ODNhOC42MDQgOC42MDQgMCAwIDAgMi4zMzcgNS41MThjNi44MDUgNi44NTYgMjAuMjIzIDIwLjIyMyAyMC4yMjMgMjAuMjIzbDExLjg0NC0xMS44M3ptNjkuMTkzIDUuMjEzczEyLjk2MS0xMi45NzMgMjAuMTcxLTIwLjE3NmMxLjYzMy0xLjYwNCAyLjMxNC0zLjc1IDIuMzI0LTYuMDEyLjAyMy00LjcxNi0zLjg2MS04LjQzNC04LjU4My04LjIxN2E4LjYwNCA4LjYwNCAwIDAgMC01LjUxOCAyLjMzOGMtNi44NTYgNi44MDUtMjAuMjIzIDIwLjIyMy0yMC4yMjMgMjAuMjIzbDExLjgzIDExLjg0NHptMzEuNzUzIDMxLjc1M3MxMi45NjEtMTIuOTczIDIwLjE3MS0yMC4xNzZjMS42MzMtMS42MDQgMi4zMTQtMy43NSAyLjMyNC02LjAxMi4wMjMtNC43MTYtMy44NjEtOC40MzQtOC41ODMtOC4yMTdhOC42MDQgOC42MDQgMCAwIDAtNS41MTggMi4zMzhjLTYuODU2IDYuODA1LTIwLjIyMyAyMC4yMjMtMjAuMjIzIDIwLjIyM2wxMS44MyAxMS44NDR6bS0xOC4wMDkgNjkuNjY3czEyLjk3MyAxMi45NjEgMjAuMTc4IDIwLjE3YzEuNjA0IDEuNjMyIDMuNzUgMi4zMTMgNi4wMTIgMi4zMjQgNC43MTcuMDIyIDguNDM0LTMuODYyIDguMjE3LTguNTg0bC0uMDAyLjAwMmE4LjYwNiA4LjYwNiAwIDAgMC0yLjMzOC01LjUxOGMtNi44MDUtNi44NTYtMjAuMjIyLTIwLjIyMi0yMC4yMjItMjAuMjIybC0xMS44NDQgMTEuODN6bS0zNy45MTQgMzcuOTE0czEyLjk3MyAxMi45NjEgMjAuMTc4IDIwLjE3YzEuNjA0IDEuNjMyIDMuNzUgMi4zMTMgNi4wMTIgMi4zMjMgNC43MTcuMDIzIDguNDM0LTMuODYxIDguMjE3LTguNTgzaC0uMDAyYTguNjAzIDguNjAzIDAgMCAwLTIuMzM3LTUuNTE4Yy02LjgwNS02Ljg1Ni0yMC4yMjMtMjAuMjIzLTIwLjIyMy0yMC4yMjNsLTExLjg0NCAxMS44M3ptLTY5LjY2Ny01LjY4N3MtMTIuOTYxIDEyLjk3My0yMC4xNjkgMjAuMTc4Yy0xLjYzMiAxLjYwNC0yLjMxNCAzLjc1LTIuMzI0IDYuMDEyLS4wMjMgNC43MTcgMy44NjEgOC40MzQgOC41ODMgOC4yMTdoLS4wMDJhOC42MDIgOC42MDIgMCAwIDAgNS41MTgtMi4zMzdjNi44NTYtNi44MDUgMjAuMjIzLTIwLjIyMyAyMC4yMjMtMjAuMjIzbC0xMS44Mi0xMS44NHptLTMxLjc0My0zMS43NHMtMTIuOTYxIDEyLjk3My0yMC4xNjkgMjAuMTc4Yy0xLjYzMiAxLjYwNC0yLjMxNCAzLjc1LTIuMzI0IDYuMDEyLS4wMjMgNC43MTcgMy44NjEgOC40MzQgOC41ODMgOC4yMTdoLS4wMDJhOC42MDQgOC42MDQgMCAwIDAgNS41MTgtMi4zMzdjNi44NTYtNi44MDUgMjAuMjIzLTIwLjIyMyAyMC4yMjMtMjAuMjIzbC0xMS44My0xMS44NXpNMTY3LjkgMTAxLjQ3YzEuNjgtMS43MDYgMy45NjctMi42NiA2LjI5Ny0yLjYyNmE3Ljg5IDcuODkgMCAwIDEgNC41NjMgMS41MWwxNi40OTkgMTIuMWMzLjIgMi4yOTcgNC4xNDQgNi42NTkgMi4yMyAxMC4zMTItMS45MTMgMy42NTMtNi4xMjMgNS41MjQtOS45NSA0LjQyM2w2LjEyNCAyMy45NDhjMS4xMTMgNC4zNTEtMS41NjQgOC45NjctNS45ODQgMTAuMzE3bC00NC42NDIgMTMuNjMgOC4yNDYgMzEuODg0YzEuMTczIDQuMzctMS41MDIgOS4wNDQtNS45NTUgMTAuNDA3cy04Ljk3NS0xLjExMS0xMC4wNjgtNS41MDVsLTEwLjI4Mi0zOS43N2MtMS4xMjYtNC4zNTUgMS41NS04Ljk4NCA1Ljk3Ni0xMC4zMzdsNDQuNjYxLTEzLjYzNy00LjEyMi0xNi4xMThjLTIuNzYzIDMuMDY0LTcuMjMzIDMuODA4LTEwLjU4NiAxLjc2MS0zLjM1My0yLjA0Ny00LjYxNC02LjI5LTIuOTg2LTEwLjA0N2w4LjExNy0xOS40NTRhOC44NzIgOC44NzIgMCAwIDEgMS44NjMtMi43OTd6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBzdHlsZT0idGV4dC1kZWNvcmF0aW9uLWNvbG9yOiMwMDA7aXNvbGF0aW9uOmF1dG87bWl4LWJsZW5kLW1vZGU6bm9ybWFsO2Jsb2NrLXByb2dyZXNzaW9uOnRiO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7dGV4dC1kZWNvcmF0aW9uLXN0eWxlOnNvbGlkO3RleHQtaW5kZW50OjA7dGV4dC10cmFuc2Zvcm06bm9uZSIgZD0iTTE2OC44NyAzMjAuMDRjMjguMzYzIDAgNTQuOTE1LTcuOTE1IDc3LjYxNC0yMS41MzhhMzYuNTc4IDM2LjU3OCAwIDAgMCAyMy4wNjcgOC4xOTQgOC43NjYgOC43NjYgMCAwIDAgLjAwNCAwYzIwLjE1NSAwIDM2LjY4LTE2LjUyOCAzNi42NzktMzYuNjgyYTguNzY2IDguNzY2IDAgMCAwIDAtLjAxMSAzNi42ODggMzYuNjg4IDAgMCAwLTguMTAzLTIyLjkyN2MxMy44MjUtMjIuODIgMjEuODY2LTQ5LjU3MiAyMS44NjYtNzguMTYyYTguNzY2IDguNzY2IDAgMSAwLTE3LjUzMSAwYzAgMjQuNzAzLTYuNzIgNDcuNzQ5LTE4LjM3OCA2Ny41NzUtNC41NjctMS45ODUtOS40NzMtMy4xNS0xNC41Mi0zLjE1N2E4Ljc2NiA4Ljc2NiAwIDAgMC0uMDEyIDBjLTIwLjE1NS0uMDAxLTM2LjY4MyAxNi41MjctMzYuNjgyIDM2LjY4Mi4wMDIgNC45OTkgMS4xMzkgOS44NjIgMy4wODMgMTQuMzk3LTE5LjcxNyAxMS40ODQtNDIuNTg2IDE4LjA5NS02Ny4wODYgMTguMDk1YTguNzY2IDguNzY2IDAgMSAwIDAgMTcuNTN6bTEwMC42OS0zMC44NzVjLTUuOTEzIDAtMTEuMTkxLTIuNTEyLTE0LjgzNi03LjA3N2E4Ljc2NiA4Ljc2NiAwIDAgMC0uMTgzLS4yMTQgMTkuMTM2IDE5LjEzNiAwIDAgMS00LjEzNC0xMS44NjNjLjAwMi0xMC42NzcgOC40NjgtMTkuMTQ0IDE5LjE0NC0xOS4xNDhhMTkuMTQ1IDE5LjE0NSAwIDAgMSAxMiA0LjI1NCA4Ljc2NiA4Ljc2NiAwIDAgMCAuMDEzLjAxIDE5LjEzNiAxOS4xMzYgMCAwIDEgNy4xNDQgMTQuODkyYy0uMDAzIDEwLjY3Ny04LjQ3IDE5LjE0NS0xOS4xNDggMTkuMTQ2eiIvPjwvZz48L2c+PC9zdmc+\" />-->\n<!--</div>-->\n"
+            },
+            "title" : "AI1",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : false,
+            "margin" : "0"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ff30debe-926b-5c10-8883-6e1940598b34"
+        },
+        "fc681cb1-d908-392e-10be-1c2e429777d8" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_value_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "sizeX" : 7,
+          "sizeY" : 4,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "Error",
+                "type" : "attribute",
+                "label" : "error",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.6813152525899835,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "\nreturn value;"
+              }, {
+                "name" : "Error",
+                "type" : "attribute",
+                "label" : "erroricon",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9011037135259696,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "if (value==\"\")value=\"hidden\";\nelse value=\"visible\";\n\nreturn value;"
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(150,64,64,0)",
+            "color" : "#000000",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<style>\n    .icon{\n        visibility: ${erroricon};\n        \n    }\n    .errorstart{\n        visibility: ${erroricon};\n    }\n    \n</style>\n<div class=\"message\">\n    <div class=\"icon\"><img src=\"https://trumeter.com/images/iot/alerticon3.png\" width=\"50\" height=\"50\"></div>\n    <div class=\"errorstart\">&nbsp;&nbsp;Error: &nbsp;</div>\n    <div class=\"error\">${error}</div>  \n</div>\n\n\n<!--</div>-->",
+              "cardCss" : "\n\n.message {\n    /*font-color: \"rgba(200,50,50,0.6)\";*/\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    font-family: Arial;\n    font-size: 120%;\n    vertical-align:middle;\n    font-weight: 400;\n    \n}\n.icon{\n    opacity: 1;\n}\n.errorstart{\n    padding: 3% 0% 0% 0%;\n    color: #ae2f2f;\n    font-weight: 600;\n    /*opacity: 0.6;*/\n}\n.error{\n    padding: 3% 0% 0% 0%;\n}\n\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/"
+            },
+            "title" : "Device Name",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "enableDataExport" : false,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : ""
+          },
+          "id" : "fc681cb1-d908-392e-10be-1c2e429777d8"
+        },
+        "fbc56199-773a-2963-2b9b-ebdde166d91f" : {
+          "isSystemType" : true,
+          "bundleAlias" : "alarm_widgets",
+          "typeAlias" : "alarms_table",
+          "type" : "alarm",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 604800000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "displayDetails" : false,
+              "allowAcknowledgment" : false,
+              "allowClear" : false,
+              "displayPagination" : false,
+              "defaultPageSize" : 40,
+              "defaultSortOrder" : "-createdTime",
+              "enableSelectColumnDisplay" : false,
+              "enableStickyAction" : false,
+              "enableFilter" : true,
+              "enableStickyHeader" : true,
+              "alarmsTitle" : "BINGOS"
+            },
+            "title" : "New Alarms table",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 600,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "createdTime",
+                "type" : "alarm",
+                "label" : "Created time",
+                "color" : "#2196f3",
+                "settings" : {
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "columnWidth" : "115px",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.021092237451093787,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.sequence",
+                "type" : "alarm",
+                "label" : "Sequence",
+                "color" : "#f44336",
+                "settings" : {
+                  "columnWidth" : "40px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.15112919521781265,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.trade",
+                "type" : "alarm",
+                "label" : "Trade",
+                "color" : "#ffc107",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.5829439683868165,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.tradeType",
+                "type" : "alarm",
+                "label" : "Type",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.34699509648248017,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.logs",
+                "type" : "alarm",
+                "label" : "Details",
+                "color" : "#4caf50",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.21044406031286655,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "details.trader",
+                "type" : "alarm",
+                "label" : "Trader",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.3542114671812613,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            },
+            "alarmSearchStatus" : "ANY",
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : true,
+            "titleIcon" : "center_focus_weak",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : { },
+            "alarmStatusList" : [ "ACTIVE", "ACK", "UNACK" ],
+            "alarmSeverityList" : [ ],
+            "alarmTypeList" : [ "newTrade", "tradeDoneBS" ],
+            "searchPropagatedAlarms" : false,
+            "datasources" : [ ],
+            "enableDataExport" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fbc56199-773a-2963-2b9b-ebdde166d91f"
+        },
+        "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_card",
+          "type" : "static",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "#000000",
+            "padding" : "0",
+            "settings" : {
+              "cardHtml" : "\n<div class='menu'>\n    \n    <div class=\"btn\" id=\"home\" >\n        <div class=\"icons\"><i class=\"fa fa-home\"></i></div>\n        <div class=\"text\" >Home</div>\n    </div>\n     <div class=\"btn\" id=\"traders\" >\n        <div class=\"icons\"><i class=\"fa fa-sitemap\"></i></div>\n        <div class=\"text\" >Traders</div>\n    </div>\n    <div class=\"btn\" id=\"sequences\" >\n        <div class='icons' ><i class=\"fa fa-server\"></i></div>\n        <div class=\"text\">Sequences</div>\n    </div>\n    <div class=\"btn\" id=\"graphs\" >\n        <div class='icons' ><i class=\"fa fa-bar-chart\"></i></div>\n        <div class=\"text\" >Graphs</div>\n    </div>\n    <div class=\"btn\" id=\"brains\" >\n        <div class='icons' ><i class=\"fa fa-bullseye\"></i></div>\n        <div class=\"text\" >Brains</div>\n    </div>\n   \n</div>\n\n\n\n",
+              "cardCss" : "\n.menu{\n    display: flex;\n    flex: wrap;\n    flex-direction: row;\n    /*align-items: center;*/\n    justify-content: space-around;\n    padding-top:5%;\n    color: rgba(0,0,0,1);\n    font-size: 240%;\n    height: 100%;\n}\n.text{\n    font-size: 30%;\n    padding-bottom: 0%;\n    padding-top: 8%;\n    margin-top: -12px;\n    font-weight: 600;\n}\n.menu div:active{\n    opacity: 0.5;\n}\nhr {\n  margin: 40px 0;\n  /*padding: 1% 1% 1% 0%;*/\n}\n.menu >div {\n    padding: 0% 0% 7% 2%;\n    text-align: center;\n}\na {\n    all: unset;\n    /*padding: 0% 0% 3% 2%;*/\n    /*color: rgba(255,255,255,0.55);*/\n    /*text-decoration: none !important;*/\n    /*color: inherit;*/\n}\n.menu:hover{\n    opacity: 0.75;\n}\n.btn{\n    padding-bottom: 10%;\n}\n    /*width: 100%;*/\n   /*height: 100%;*/\n    /*height: auto;*/\n    /*position: absolute;*/\n    /*margin: 0;*/\n    /*top: 20%;*/\n    /*left: 35%;*/\n    /*transform: translateY(-50%, -50%);*/\n    /*border-radius: 3px;*/\n    /*background-color: #EEEAE9;*/\n    /*border: none;*/\n    /*color: #c8c8c8;;*/\n    /*padding: 1% 0% 0% 0%;*/\n    /*font-family: Roboto;*/\n    /*text-align: center;*/\n    /*vertical-align: centre;*/\n    /*align-items: center;*/\n    /*justify-content: center;*/\n    /*text-decoration: none;*/\n    /*display: inline-block;*/\n    /*font-size: 300%;*/\n    /*margin: 30px 2px;*/\n    /*cursor: pointer;*/\n    /*font-weight: bold;*/\n    /*text-decoration: underline;*/\n/*}*/\n\n\n/*.button:hover .fa-envelope-o, .button .fa-envelope-open-o{*/\n/*    display: none;*/\n/*}*/\n/*.button:hover {*/\n/*    border-radius: 5px;*/\n/*    background: #FFD400;*/\n/*    color: #000000;*/\n/*    display: inline-block;*/\n/*    text-align: center;*/\n/*    text-decoration: none;*/\n/*    font-size: 10px;*/\n/*    margin: 2px 2px;*/\n/*    cursor: pointer;*/\n/*    font-weight: bold;*/\n/*}*/"
+            },
+            "title" : "New HTML Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "traders",
+                "icon" : "devices_other",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "traders",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : false,
+                "dialogTitle" : null,
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : null,
+                "openRightLayout" : false,
+                "id" : "f13189f7-3931-a7b2-8f63-2fb2f2c275ce"
+              }, {
+                "name" : "sequences",
+                "icon" : "show_chart",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "sequences",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : false,
+                "dialogTitle" : null,
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : null,
+                "openRightLayout" : false,
+                "id" : "4c78574c-dd9e-f1db-8187-7d8821a0c954"
+              }, {
+                "name" : "graphs",
+                "icon" : "multiline_chart",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "graphs",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openInSeparateDialog" : false,
+                "dialogTitle" : null,
+                "dialogHideDashboardToolbar" : true,
+                "dialogWidth" : null,
+                "dialogHeight" : null,
+                "openRightLayout" : false,
+                "id" : "cae001b4-d62c-36c6-ac97-63612a2e7f53"
+              }, {
+                "name" : "home",
+                "icon" : "home",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : "home",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "55f83256-3775-8aab-3a7a-8fe0fa6e3b6b"
+              }, {
+                "name" : "brains",
+                "icon" : "my_location",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "brains",
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "0f1cb80f-952a-896e-13d3-f918b485f83c"
+              } ]
+            },
+            "widgetCss" : "",
+            "pageSize" : 1024
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "33f8c015-b1a2-1f3a-669d-b93cc6c9b207"
+        },
+        "f2c96902-e400-8dd5-4349-6f0f645e7247" : {
+          "isSystemType" : true,
+          "bundleAlias" : "alarm_widgets",
+          "typeAlias" : "alarms_table",
+          "type" : "alarm",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 10.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSelection" : true,
+              "enableSearch" : true,
+              "displayDetails" : false,
+              "allowAcknowledgment" : false,
+              "allowClear" : false,
+              "displayPagination" : false,
+              "defaultPageSize" : 40,
+              "defaultSortOrder" : "-createdTime",
+              "enableSelectColumnDisplay" : false,
+              "enableStickyAction" : false,
+              "enableFilter" : true,
+              "enableStickyHeader" : true,
+              "alarmsTitle" : "SEQUENCES"
+            },
+            "title" : "New Alarms table",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 600,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "alarmSource" : {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "7fb0220f-51fc-ffad-4aa8-ada20b1a49ce",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "p1",
+                "type" : "timeseries",
+                "label" : "p1",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.3342624510536094
+              } ]
+            },
+            "alarmSearchStatus" : "ANY",
+            "alarmsPollingInterval" : 5,
+            "showTitleIcon" : true,
+            "titleIcon" : "center_focus_weak",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : { },
+            "alarmStatusList" : [ "ACTIVE", "ACK", "UNACK" ],
+            "alarmSeverityList" : [ ],
+            "alarmTypeList" : [ "tradeDone", "tradeReady" ],
+            "searchPropagatedAlarms" : false,
+            "datasources" : [ ],
+            "enableDataExport" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "f2c96902-e400-8dd5-4349-6f0f645e7247"
+        },
+        "a6432f35-fb14-6d7d-5fdd-22a3b52e6db3" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "tradePrep",
+                "type" : "timeseries",
+                "label" : "tradePrep",
+                "color" : "#2196f3",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "tooltipValueFormatter" : "",
+                  "showSeparateAxis" : false,
+                  "axisTitle" : "",
+                  "axisPosition" : "left",
+                  "axisTicksFormatter" : "",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.09958256067307625
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 36000000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 1000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#efe9e9",
+            "color" : "#0c0c0c",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#0c0b0b"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#232323",
+                "tickDecimals" : 1,
+                "min" : 32000,
+                "max" : 34000
+              },
+              "grid" : {
+                "color" : "#101010",
+                "tickColor" : "#807c7c",
+                "verticalLines" : false,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "backgroundColor" : "rgba(0, 0, 0, 0.16)"
+              },
+              "stack" : false,
+              "tooltipIndividual" : false,
+              "timeForComparison" : "previousInterval",
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "showLabels" : true
+              },
+              "smoothLines" : false,
+              "comparisonEnabled" : false,
+              "showTooltip" : true,
+              "customLegendEnabled" : false,
+              "dataKeysListForLabels" : [ {
+                "type" : "timeseries",
+                "name" : "alarm0",
+                "settings" : { }
+              } ]
+            },
+            "title" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "showLegend" : false,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "a6432f35-fb14-6d7d-5fdd-22a3b52e6db3"
+        },
+        "6ddf0b25-ff94-b2e9-e50f-c570ac250017" : {
+          "isSystemType" : true,
+          "bundleAlias" : "entity_admin_widgets",
+          "typeAlias" : "device_admin_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "#414042",
+            "padding" : "0px",
+            "settings" : {
+              "enableSearch" : false,
+              "displayPagination" : false,
+              "defaultPageSize" : 20,
+              "defaultSortOrder" : "Label",
+              "displayEntityName" : false,
+              "displayEntityType" : false,
+              "entitiesTitle" : "SEQUENCES",
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "entityNameColumnTitle" : "Device Name",
+              "displayEntityLabel" : false,
+              "useRowStyleFunction" : true,
+              "rowStyleFunction" : "result = {background:\"\"};\r\nif (entity.enable == \"true\") {\r\n   result.background = \"#cef8d3\";\r\n}\r\n//   result.text = \"black\";\r\n// } else if (entity.status == \" ON\") {\r\n//   result.background = \"green\";\r\n// }\r\n// else if (entity.status == \"OFF\") {\r\n//   result.background = \"grey\";\r\n// }\r\n// else if (entity.status == \"\") {\r\n//   result.background = \"\";\r\n// }\r\nreturn result;"
+            },
+            "title" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 500,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "7fb0220f-51fc-ffad-4aa8-ada20b1a49ce",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "label",
+                "type" : "entityField",
+                "label" : "Label",
+                "color" : "#2196f3",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.27978538160964317
+              }, {
+                "name" : "enable",
+                "type" : "timeseries",
+                "label" : "enable",
+                "color" : "#4caf50",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "disabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.9604842908720008,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "tradeType",
+                "type" : "timeseries",
+                "label" : "Trade",
+                "color" : "#ffc107",
+                "settings" : {
+                  "columnWidth" : "0px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.7869466991055034,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "showTitleIcon" : true,
+            "titleIcon" : "insert_chart",
+            "iconColor" : "#414042",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "fontSize" : "5px",
+              "fontWeight" : 400
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ ],
+              "actionCellButton" : [ ],
+              "rowClick" : [ {
+                "name" : "device state",
+                "icon" : "more_horiz",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : null,
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "id" : "9d0e80cc-97f7-116b-e160-57a663671bc8"
+              } ]
+            },
+            "enableDataExport" : false,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "6ddf0b25-ff94-b2e9-e50f-c570ac250017"
+        },
+        "2251b113-fc45-cdbc-5ecf-8996e710af92" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "t1",
+                "type" : "timeseries",
+                "label" : "trend 1A",
+                "color" : "#acb3ab",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue",
+                    "lineWidth" : 0
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.35918338324734034,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "t2",
+                "type" : "timeseries",
+                "label" : "trend 1B",
+                "color" : "#9f6e51",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.3633730309024925,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "t3",
+                "type" : "timeseries",
+                "label" : "trend 2A",
+                "color" : "#1406ff",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.6388933237102687,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "t4",
+                "type" : "timeseries",
+                "label" : "trend 2B",
+                "color" : "#c5c7fa",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.02530860572437632,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p1",
+                "type" : "timeseries",
+                "label" : "position 1",
+                "color" : "#010101",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.40318556917452986,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p2",
+                "type" : "timeseries",
+                "label" : "position 2",
+                "color" : "#f49fde",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.5415775742715452,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p3",
+                "type" : "timeseries",
+                "label" : "position 3",
+                "color" : "#f80000",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.894033317128222,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p4",
+                "type" : "timeseries",
+                "label" : "position 4",
+                "color" : "#ffc107",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.013803294836451263,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p5",
+                "type" : "timeseries",
+                "label" : "position 5",
+                "color" : "#fbfe0a",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.9755256319981338,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p6",
+                "type" : "timeseries",
+                "label" : "position 6",
+                "color" : "#1efc09",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.17278716995345467,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p7",
+                "type" : "timeseries",
+                "label" : "position 7",
+                "color" : "#0ccfaa",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.7263465432742571,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p8",
+                "type" : "timeseries",
+                "label" : "position 8",
+                "color" : "#0bc2f0",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 3,
+                  "showPointsRadius" : 1,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.7693149229663099,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p9",
+                "type" : "timeseries",
+                "label" : "position 9",
+                "color" : "#e0b0fa",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.7620433327620277,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p10",
+                "type" : "timeseries",
+                "label" : "position 10",
+                "color" : "#aa08fe",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.018436988898600237,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p11",
+                "type" : "timeseries",
+                "label" : "position 11",
+                "color" : "#d40aa9",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.7368159867812087,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "p12",
+                "type" : "timeseries",
+                "label" : "position 12",
+                "color" : "#ffd6f1",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : false,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 3,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  }
+                },
+                "_hash" : 0.35108910583781716,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "trade",
+                "type" : "timeseries",
+                "label" : "Trade",
+                "color" : "#8ffe06",
+                "settings" : {
+                  "excludeFromStacking" : false,
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : true,
+                  "showLines" : true,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointShape" : "circle",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showPointsLineWidth" : 6,
+                  "showPointsRadius" : 4,
+                  "showSeparateAxis" : true,
+                  "axisPosition" : "right",
+                  "thresholds" : [ {
+                    "thresholdValueSource" : "predefinedValue"
+                  } ],
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true
+                  },
+                  "axisMin" : -1,
+                  "axisMax" : 1
+                },
+                "_hash" : 0.0506421904977723,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : true,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 3600000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 1000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "#6d6e71",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#6d6e71"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#6d6e71",
+                "tickDecimals" : 1
+              },
+              "grid" : {
+                "color" : "#939598",
+                "tickColor" : "#d5d5d5",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 0,
+                "backgroundColor" : "#ffffff"
+              },
+              "stack" : false,
+              "tooltipIndividual" : false,
+              "timeForComparison" : "previousInterval",
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "showLabels" : true
+              },
+              "smoothLines" : true,
+              "comparisonEnabled" : false,
+              "showTooltip" : true,
+              "thresholdsLineWidth" : 3
+            },
+            "title" : "Sequences ",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : true,
+              "showMax" : true,
+              "showAvg" : true,
+              "showTotal" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2251b113-fc45-cdbc-5ecf-8996e710af92"
+        },
+        "70b2f41b-c647-ccbe-4b17-fbc7c09a2b3b" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "timeseries_bars_flot",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "newTrade",
+                "type" : "timeseries",
+                "label" : "newTrade",
+                "color" : "#b2f1ae",
+                "settings" : {
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "excludeFromStacking" : true,
+                  "showLines" : false,
+                  "showPoints" : false,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  },
+                  "thresholds" : [ ]
+                },
+                "_hash" : 0.9570471340013949,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "tradeDoneBS",
+                "type" : "timeseries",
+                "label" : "tradeDoneBS",
+                "color" : "#00ff0a",
+                "settings" : {
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "excludeFromStacking" : true,
+                  "showLines" : false,
+                  "showPoints" : false,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  },
+                  "thresholds" : [ ]
+                },
+                "_hash" : 0.6901538227824284,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "E_buy",
+                "type" : "timeseries",
+                "label" : "Extreme Buy",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8748627271814897,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "E_sell",
+                "type" : "timeseries",
+                "label" : "Extreme Sell",
+                "color" : "#fdb8b8",
+                "settings" : { },
+                "_hash" : 0.5157105886936424,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_buy",
+                "type" : "timeseries",
+                "label" : "Neutral Buy",
+                "color" : "#f8ff00",
+                "settings" : { },
+                "_hash" : 0.47685159830192414,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_sell",
+                "type" : "timeseries",
+                "label" : "Neutral Sell",
+                "color" : "#d8dabb",
+                "settings" : { },
+                "_hash" : 0.39582891541452314,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 36000000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 3600000
+              },
+              "aggregation" : {
+                "type" : "COUNT",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#efe9e9",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "stack" : true,
+              "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : true,
+              "tooltipCumulative" : true,
+              "hideZeros" : true,
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#545454",
+                "backgroundColor" : "rgba(0,0,0,0.08)",
+                "tickColor" : "#DDDDDD"
+              },
+              "xaxis" : {
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "min" : null,
+                "max" : null,
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454",
+                "tickSize" : null,
+                "tickDecimals" : 0,
+                "ticksFormatter" : ""
+              },
+              "defaultBarWidth" : 1000,
+              "barAlignment" : "left",
+              "thresholdsLineWidth" : 500,
+              "comparisonEnabled" : false,
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
+              },
+              "customLegendEnabled" : false
+            },
+            "title" : "Daily Trades",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "widgetStyle" : { },
+            "useDashboardTimewindow" : false,
+            "showLegend" : true,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "70b2f41b-c647-ccbe-4b17-fbc7c09a2b3b"
+        },
+        "362b31d6-d611-e1ff-a4d1-6c65ae0069b2" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "newTrade",
+                "type" : "timeseries",
+                "label" : "newTrade",
+                "color" : "#07fb0a",
+                "settings" : { },
+                "_hash" : 0.6219494648975379
+              }, {
+                "name" : "tradeDoneBS",
+                "type" : "timeseries",
+                "label" : "tradeDoneBS",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9290853362935036
+              } ],
+              "latestDataKeys" : null
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 43200000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 1000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#efe9e9",
+            "color" : "#0c0c0c",
+            "padding" : "8px",
+            "settings" : {
+              "stack" : false,
+              "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : false,
+              "tooltipCumulative" : false,
+              "hideZeros" : false,
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#101010",
+                "backgroundColor" : "rgba(0, 0, 0, 0.16)",
+                "tickColor" : "#807c7c"
+              },
+              "xaxis" : {
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#0c0b0b"
+              },
+              "yaxis" : {
+                "min" : null,
+                "max" : null,
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#232323",
+                "tickSize" : null,
+                "tickDecimals" : 1,
+                "ticksFormatter" : ""
+              },
+              "shadowSize" : 4,
+              "smoothLines" : false,
+              "comparisonEnabled" : false,
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
+              },
+              "customLegendEnabled" : false
+            },
+            "title" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false
+            },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "362b31d6-d611-e1ff-a4d1-6c65ae0069b2"
+        },
+        "6852f4ad-49dd-c90c-5d06-0e751097ff13" : {
+          "isSystemType" : false,
+          "bundleAlias" : "rossmann_new",
+          "typeAlias" : "3d_chart",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 14.5,
+          "sizeY" : 12.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "E_buy",
+                "type" : "timeseries",
+                "label" : "E_buy",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.2458268078971606
+              }, {
+                "name" : "E_sell",
+                "type" : "timeseries",
+                "label" : "E_sell",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.681239061310416
+              }, {
+                "name" : "N_buy",
+                "type" : "timeseries",
+                "label" : "N_buy",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.27507899276852976
+              }, {
+                "name" : "N_sell",
+                "type" : "timeseries",
+                "label" : "N_sell",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.7333617600157962
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 7200000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 900000
+              },
+              "aggregation" : {
+                "type" : "COUNT",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "maxZValue" : 25,
+              "zAxisUnit" : "Pieces",
+              "yAxisType" : "Monday to Friday",
+              "xAxisType" : "24hrs format",
+              "yAxisMonday" : "Monday",
+              "yAxisTuesday" : "Tuesday",
+              "yAxisWednesday" : "Wednesday",
+              "yAxisThursday" : "Thursday",
+              "yAxisFriday" : "Friday",
+              "yAxisSaturday" : "Saturday",
+              "yAxisSunday" : "Sunday"
+            },
+            "title" : "Trade Type",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "6852f4ad-49dd-c90c-5d06-0e751097ff13"
+        },
+        "ca1cf2ff-782b-1e05-6562-6bf5e708a252" : {
+          "isSystemType" : true,
+          "bundleAlias" : "rossmann",
+          "typeAlias" : "chart2",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 10,
+          "sizeY" : 9,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "E_buy",
+                "type" : "timeseries",
+                "label" : "E_buy",
+                "color" : "#2196f3",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.43994815276970134,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "E_sell",
+                "type" : "timeseries",
+                "label" : "E_sell",
+                "color" : "#4caf50",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.16351928213619016,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_buy",
+                "type" : "timeseries",
+                "label" : "N_buy",
+                "color" : "#f44336",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.3503955606424669,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_sell",
+                "type" : "timeseries",
+                "label" : "N_sell",
+                "color" : "#ffc107",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.2166576716576356,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "W_buy",
+                "type" : "timeseries",
+                "label" : "W_buy",
+                "color" : "#607d8b",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.09625917225117342,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "W_sell",
+                "type" : "timeseries",
+                "label" : "W_sell",
+                "color" : "#9c27b0",
+                "settings" : {
+                  "chartType" : "Bar",
+                  "showAverage" : false,
+                  "showMinValue" : false,
+                  "showMaxValue" : false,
+                  "gradientColor1" : "#008a00",
+                  "gradientColor2" : "#008a00",
+                  "fillOpacity" : 0.5,
+                  "fillChart" : false,
+                  "axisAssignment" : "Left",
+                  "numberOfDigits" : 1
+                },
+                "_hash" : 0.6760284317473728,
+                "units" : "B",
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : true,
+              "hideAggInterval" : true,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 3600000
+              },
+              "aggregation" : {
+                "type" : "COUNT",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0",
+            "settings" : {
+              "yAxisLeftAutoScale" : true,
+              "yAxisLeftMaxScale" : 90,
+              "yAxisRightAutoScale" : true,
+              "showPanZoomTool" : false,
+              "annotations" : [ ],
+              "yAxisLeftMinScale" : 0,
+              "showDataPoints" : false,
+              "yAxisLeftTitle" : "Bingos",
+              "yAxisLeftUnit" : "B",
+              "yAxisRightMinScale" : 0,
+              "yAxisRightMaxScale" : 100
+            },
+            "title" : "Bingos by trade type",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "row",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            },
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ca1cf2ff-782b-1e05-6562-6bf5e708a252"
+        },
+        "44ebfded-5b45-9d4d-8a5b-726d2f1647a6" : {
+          "isSystemType" : true,
+          "bundleAlias" : "rossmann",
+          "typeAlias" : "switch6",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 4.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "retrieveValueMethod" : "Subscribe for attribute",
+              "updateValueKey" : "active",
+              "statusRequestMethod" : "getValue",
+              "changeRequestMethod" : "setValue",
+              "convertStatusRequestMethod" : "return data ? true : false;",
+              "convertStatusChangeMethod" : "return value;"
+            },
+            "title" : "LIVE",
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : null,
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "44ebfded-5b45-9d4d-8a5b-726d2f1647a6"
+        },
+        "c73c4e6e-c20d-1ed5-6458-a1f47eeceadb" : {
+          "isSystemType" : true,
+          "bundleAlias" : "entity_admin_widgets",
+          "typeAlias" : "device_admin_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#f1f2f2",
+            "color" : "#414042",
+            "padding" : "0px",
+            "settings" : {
+              "entitiesTitle" : "DEVICE LIST",
+              "enableSearch" : false,
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : false,
+              "enableStickyAction" : false,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : false,
+              "defaultSortOrder" : "Name",
+              "useRowStyleFunction" : true,
+              "rowStyleFunction" : "var result = {background:\"\"};\r\nif (entity.active == \"true\") {\r\n   result.background = \"#cef8d3\";\r\n}else result.background=\"red\";\r\n//   result.text = \"black\";\r\n// } else if (entity.status == \" ON\") {\r\n//   result.background = \"green\";\r\n// }\r\n// else if (entity.status == \"OFF\") {\r\n//   result.background = \"grey\";\r\n// }\r\n// else if (entity.status == \"\") {\r\n//   result.background = \"\";\r\n// }\r\nreturn result;"
+            },
+            "title" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 500,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "active",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "10px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "hidden",
+                  "columnSelectionToDisplay" : "disabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.8342583543550575,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "label",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#607d8b",
+                "settings" : {
+                  "columnWidth" : "50px",
+                  "useCellStyleFunction" : false,
+                  "cellStyleFunction" : "",
+                  "useCellContentFunction" : false,
+                  "cellContentFunction" : "",
+                  "defaultColumnVisibility" : "visible",
+                  "columnSelectionToDisplay" : "enabled",
+                  "columnExportOption" : "onlyVisible"
+                },
+                "_hash" : 0.5775589584218943,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "devices_other",
+            "iconColor" : "#414042",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "fontSize" : "5px",
+              "fontWeight" : 400
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ ],
+              "actionCellButton" : [ ],
+              "rowClick" : [ {
+                "name" : "device state",
+                "icon" : "more_horiz",
+                "type" : "updateDashboardState",
+                "targetDashboardStateId" : null,
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "id" : "9d0e80cc-97f7-116b-e160-57a663671bc8"
+              } ]
+            },
+            "enableDataExport" : false,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c73c4e6e-c20d-1ed5-6458-a1f47eeceadb"
+        },
+        "d941481e-9c45-3023-fbf6-36c6806a8965" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "API requests",
+              "ledColor" : "#1c40e4",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueAttribute" : "APIrequests",
+              "parseValueFunction" : "return data ? true : false;"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d941481e-9c45-3023-fbf6-36c6806a8965"
+        },
+        "00c1d559-5033-25f4-df53-dc9cf51546e7" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "API SENT",
+              "ledColor" : "#e6f70b",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueAttribute" : "APIsent",
+              "parseValueFunction" : "return data ? true : false;"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "00c1d559-5033-25f4-df53-dc9cf51546e7"
+        },
+        "a2bc2bc2-90bb-c2e8-e515-24da7f3e3007" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Line",
+              "ledColor" : "#ffa400",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueAttribute" : "requests",
+              "parseValueFunction" : "return data ? true : false;"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "a2bc2bc2-90bb-c2e8-e515-24da7f3e3007"
+        },
+        "f2179362-440a-2dce-2bae-b34aec0dc64f" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Bingo!",
+              "ledColor" : "#ff0016",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueAttribute" : "requests",
+              "parseValueFunction" : "return data ? true : false;"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "f2179362-440a-2dce-2bae-b34aec0dc64f"
+        },
+        "d976266f-29ac-18c7-51e5-8508301d7808" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "LIVE",
+              "initialValue" : true,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "live",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "setLiveEnable",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "LIVE",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d976266f-29ac-18c7-51e5-8508301d7808"
+        },
+        "d65086a4-6116-a8c9-7ebd-1fdf79d6ba09" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "DEMO",
+              "initialValue" : true,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "demo",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "setDemoEnable",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "DEMO",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d65086a4-6116-a8c9-7ebd-1fdf79d6ba09"
+        },
+        "97e0df7a-e2d8-9f61-9737-3f4d32f074ba" : {
+          "isSystemType" : true,
+          "bundleAlias" : "rossmann",
+          "typeAlias" : "switch6",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 4.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "retrieveValueMethod" : "Subscribe for attribute",
+              "updateValueKey" : "active",
+              "statusRequestMethod" : "getValue",
+              "changeRequestMethod" : "setValue",
+              "convertStatusRequestMethod" : "return data ? true : false;",
+              "convertStatusChangeMethod" : "return value;"
+            },
+            "title" : "LIVE",
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "d0789829-429d-842a-caed-e225bff7d3b6" ],
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : null,
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "97e0df7a-e2d8-9f61-9737-3f4d32f074ba"
+        },
+        "0744f115-3ec5-2648-2fe9-bfc1b75019ff" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "LIVE",
+              "initialValue" : true,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "live",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "set_live_enable",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "LIVE",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0744f115-3ec5-2648-2fe9-bfc1b75019ff"
+        },
+        "bf8b3f13-53af-0c1e-5240-4b44d98d1821" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "DEMO",
+              "initialValue" : true,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "demo",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "set_demo_enable",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "DEMO",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "bf8b3f13-53af-0c1e-5240-4b44d98d1821"
+        },
+        "0ad10967-561b-a8d8-3d49-b410cadcfbdb" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "rgba(230,231,232,0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "TEST",
+              "initialValue" : true,
+              "retrieveValueMethod" : "attribute",
+              "valueKey" : "test",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "set_test_enable",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "LIVE",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" ],
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showTitleIcon" : false,
+            "titleTooltip" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0ad10967-561b-a8d8-3d49-b410cadcfbdb"
+        },
+        "200411d4-3c93-3774-8c23-d491b10d1a93" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "timeseries_bars_flot",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d0789829-429d-842a-caed-e225bff7d3b6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "newTrade",
+                "type" : "timeseries",
+                "label" : "newTrade",
+                "color" : "#b2f1ae",
+                "settings" : {
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "excludeFromStacking" : true,
+                  "showLines" : false,
+                  "showPoints" : false,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  },
+                  "thresholds" : [ ]
+                },
+                "_hash" : 0.9570471340013949,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "tradeDoneBS",
+                "type" : "timeseries",
+                "label" : "tradeDoneBS",
+                "color" : "#00ff0a",
+                "settings" : {
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "excludeFromStacking" : true,
+                  "showLines" : false,
+                  "showPoints" : false,
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  },
+                  "thresholds" : [ ]
+                },
+                "_hash" : 0.6901538227824284,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "E_buy",
+                "type" : "timeseries",
+                "label" : "Extreme Buy",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8748627271814897,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "E_sell",
+                "type" : "timeseries",
+                "label" : "Extreme Sell",
+                "color" : "#fdb8b8",
+                "settings" : { },
+                "_hash" : 0.5157105886936424,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_buy",
+                "type" : "timeseries",
+                "label" : "Neutral Buy",
+                "color" : "#f8ff00",
+                "settings" : { },
+                "_hash" : 0.47685159830192414,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "N_sell",
+                "type" : "timeseries",
+                "label" : "Neutral Sell",
+                "color" : "#d8dabb",
+                "settings" : { },
+                "_hash" : 0.39582891541452314,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 36000000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 3600000
+              },
+              "aggregation" : {
+                "type" : "COUNT",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#efe9e9",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "stack" : true,
+              "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : true,
+              "tooltipCumulative" : true,
+              "hideZeros" : true,
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#545454",
+                "backgroundColor" : "rgba(0,0,0,0.08)",
+                "tickColor" : "#DDDDDD"
+              },
+              "xaxis" : {
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "min" : null,
+                "max" : null,
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454",
+                "tickSize" : null,
+                "tickDecimals" : 0,
+                "ticksFormatter" : ""
+              },
+              "defaultBarWidth" : 1000,
+              "barAlignment" : "left",
+              "thresholdsLineWidth" : 500,
+              "comparisonEnabled" : false,
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
+              },
+              "customLegendEnabled" : false
+            },
+            "title" : "Daily Trades",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "widgetStyle" : { },
+            "useDashboardTimewindow" : false,
+            "showLegend" : true,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "200411d4-3c93-3774-8c23-d491b10d1a93"
+        }
+      },
+      "states" : {
+        "sequences" : {
+          "name" : "Sequences",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+                  "sizeX" : 10,
+                  "sizeY" : 2,
+                  "row" : 2,
+                  "col" : 0,
+                  "mobileOrder" : 0,
+                  "mobileHeight" : 1
+                },
+                "f2c96902-e400-8dd5-4349-6f0f645e7247" : {
+                  "sizeX" : 22,
+                  "sizeY" : 2,
+                  "row" : 4,
+                  "col" : 1
+                },
+                "6ddf0b25-ff94-b2e9-e50f-c570ac250017" : {
+                  "sizeX" : 7,
+                  "sizeY" : 12,
+                  "row" : 6,
+                  "col" : 1
+                },
+                "2251b113-fc45-cdbc-5ecf-8996e710af92" : {
+                  "sizeX" : 15,
+                  "sizeY" : 13,
+                  "row" : 6,
+                  "col" : 8
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        },
+        "home" : {
+          "name" : "BeanStalk Brain",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "ba4d6e97-ca4e-0488-bf92-ab34c48d87a0" : {
+                  "sizeX" : 36,
+                  "sizeY" : 8,
+                  "row" : 1,
+                  "col" : 1,
+                  "mobileHide" : false
+                },
+                "1cc08cb3-b2ab-190d-4112-2255aec6523c" : {
+                  "sizeX" : 12,
+                  "sizeY" : 4,
+                  "row" : 49,
+                  "col" : 4,
+                  "mobileHide" : true,
+                  "mobileHeight" : 1
+                },
+                "7659b043-aec4-ab4e-b93f-9e75c7960e51" : {
+                  "sizeX" : 11,
+                  "sizeY" : 6,
+                  "row" : 4,
+                  "col" : 90,
+                  "mobileHide" : false,
+                  "mobileOrder" : 1,
+                  "mobileHeight" : 1
+                },
+                "fc681cb1-d908-392e-10be-1c2e429777d8" : {
+                  "sizeX" : 44,
+                  "sizeY" : 6,
+                  "row" : 2,
+                  "col" : 41,
+                  "mobileOrder" : 11,
+                  "mobileHeight" : 1
+                },
+                "fbc56199-773a-2963-2b9b-ebdde166d91f" : {
+                  "sizeX" : 99,
+                  "sizeY" : 31,
+                  "row" : 18,
+                  "col" : 0,
+                  "mobileOrder" : 2,
+                  "mobileHeight" : 6
+                },
+                "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+                  "sizeX" : 46,
+                  "sizeY" : 9,
+                  "row" : 9,
+                  "col" : 1,
+                  "mobileOrder" : 0,
+                  "mobileHeight" : 1
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#e9e9e9",
+                "columns" : 120,
+                "margin" : 1,
+                "backgroundSizeMode" : "cover",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "traders" : {
+          "name" : "Traders ",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "ba4d6e97-ca4e-0488-bf92-ab34c48d87a0" : {
+                  "sizeX" : 36,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 0,
+                  "mobileHide" : false,
+                  "mobileOrder" : 1,
+                  "mobileHeight" : 1
+                },
+                "e98d562c-4e1d-4cd4-8e21-83094ea1e4ad" : {
+                  "sizeX" : 19,
+                  "sizeY" : 44,
+                  "row" : 17,
+                  "col" : 1,
+                  "mobileHide" : false,
+                  "mobileHeight" : 2,
+                  "mobileOrder" : 2
+                },
+                "a50cd1f0-3741-d304-4f77-d4946a9e55bb" : {
+                  "sizeX" : 47,
+                  "sizeY" : 30,
+                  "row" : 17,
+                  "col" : 43,
+                  "mobileHide" : false,
+                  "mobileHeight" : 1
+                },
+                "23995584-090a-8118-4c4a-a651dda47c9d" : {
+                  "sizeX" : 36,
+                  "sizeY" : 19,
+                  "row" : 48,
+                  "col" : 43,
+                  "mobileHide" : false,
+                  "mobileOrder" : 4,
+                  "mobileHeight" : 1
+                },
+                "09405200-61b7-49e1-42e6-b64695368796" : {
+                  "sizeX" : 20,
+                  "sizeY" : 6,
+                  "row" : 45,
+                  "col" : 22,
+                  "mobileHeight" : 1,
+                  "mobileHide" : true
+                },
+                "d90859b0-63ac-0f52-44e9-bdb816a971e8" : {
+                  "sizeX" : 11,
+                  "sizeY" : 6,
+                  "row" : 2,
+                  "col" : 109,
+                  "mobileHide" : true,
+                  "mobileOrder" : 1
+                },
+                "ff30debe-926b-5c10-8883-6e1940598b34" : {
+                  "sizeX" : 21,
+                  "sizeY" : 28,
+                  "row" : 17,
+                  "col" : 21,
+                  "mobileHide" : false,
+                  "mobileOrder" : 3,
+                  "mobileHeight" : 6
+                },
+                "fc681cb1-d908-392e-10be-1c2e429777d8" : {
+                  "sizeX" : 49,
+                  "sizeY" : 6,
+                  "row" : 2,
+                  "col" : 41,
+                  "mobileOrder" : 11,
+                  "mobileHeight" : 1,
+                  "mobileHide" : false
+                },
+                "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+                  "sizeX" : 50,
+                  "sizeY" : 9,
+                  "row" : 8,
+                  "col" : 1,
+                  "mobileOrder" : 0,
+                  "mobileHeight" : 1
+                },
+                "a6432f35-fb14-6d7d-5fdd-22a3b52e6db3" : {
+                  "sizeX" : 39,
+                  "sizeY" : 20,
+                  "row" : 48,
+                  "col" : 80
+                },
+                "d976266f-29ac-18c7-51e5-8508301d7808" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 17,
+                  "col" : 91
+                },
+                "d65086a4-6116-a8c9-7ebd-1fdf79d6ba09" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 28,
+                  "col" : 91
+                },
+                "97e0df7a-e2d8-9f61-9737-3f4d32f074ba" : {
+                  "sizeX" : 10,
+                  "sizeY" : 11,
+                  "row" : 16,
+                  "col" : 109
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#ffffff",
+                "columns" : 120,
+                "margin" : 1,
+                "backgroundSizeMode" : "cover",
+                "autoFillHeight" : true,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "graphs" : {
+          "name" : "Graphs",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+                  "sizeX" : 10,
+                  "sizeY" : 2,
+                  "row" : 1,
+                  "col" : 1,
+                  "mobileHeight" : 1,
+                  "mobileOrder" : 0
+                },
+                "70b2f41b-c647-ccbe-4b17-fbc7c09a2b3b" : {
+                  "sizeX" : 11,
+                  "sizeY" : 5,
+                  "row" : 3,
+                  "col" : 1
+                },
+                "362b31d6-d611-e1ff-a4d1-6c65ae0069b2" : {
+                  "sizeX" : 11,
+                  "sizeY" : 5,
+                  "row" : 3,
+                  "col" : 12
+                },
+                "6852f4ad-49dd-c90c-5d06-0e751097ff13" : {
+                  "sizeX" : 10,
+                  "sizeY" : 5,
+                  "row" : 22,
+                  "col" : 1
+                },
+                "ca1cf2ff-782b-1e05-6562-6bf5e708a252" : {
+                  "sizeX" : 10,
+                  "sizeY" : 9,
+                  "row" : 8,
+                  "col" : 1
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        },
+        "brains" : {
+          "name" : "brains",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "33f8c015-b1a2-1f3a-669d-b93cc6c9b207" : {
+                  "sizeX" : 50,
+                  "sizeY" : 10,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "44ebfded-5b45-9d4d-8a5b-726d2f1647a6" : {
+                  "sizeX" : 10,
+                  "sizeY" : 11,
+                  "row" : 9,
+                  "col" : 107
+                },
+                "c73c4e6e-c20d-1ed5-6458-a1f47eeceadb" : {
+                  "sizeX" : 15,
+                  "sizeY" : 40,
+                  "row" : 10,
+                  "col" : 3
+                },
+                "d941481e-9c45-3023-fbf6-36c6806a8965" : {
+                  "sizeX" : 9,
+                  "sizeY" : 8,
+                  "row" : 11,
+                  "col" : 32
+                },
+                "00c1d559-5033-25f4-df53-dc9cf51546e7" : {
+                  "sizeX" : 9,
+                  "sizeY" : 8,
+                  "row" : 11,
+                  "col" : 43
+                },
+                "a2bc2bc2-90bb-c2e8-e515-24da7f3e3007" : {
+                  "sizeX" : 9,
+                  "sizeY" : 8,
+                  "row" : 10,
+                  "col" : 76
+                },
+                "f2179362-440a-2dce-2bae-b34aec0dc64f" : {
+                  "sizeX" : 9,
+                  "sizeY" : 8,
+                  "row" : 10,
+                  "col" : 85
+                },
+                "0744f115-3ec5-2648-2fe9-bfc1b75019ff" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 10,
+                  "col" : 20
+                },
+                "bf8b3f13-53af-0c1e-5240-4b44d98d1821" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 20,
+                  "col" : 20
+                },
+                "0ad10967-561b-a8d8-3d49-b410cadcfbdb" : {
+                  "sizeX" : 10,
+                  "sizeY" : 10,
+                  "row" : 30,
+                  "col" : 20
+                },
+                "200411d4-3c93-3774-8c23-d491b10d1a93" : {
+                  "sizeX" : 55,
+                  "sizeY" : 25,
+                  "row" : 21,
+                  "col" : 35
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 120,
+                "margin" : 1,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "dba91c70-7d58-c228-e845-510b10beecb8" : {
+          "id" : "dba91c70-7d58-c228-e845-510b10beecb8",
+          "alias" : "All Devices",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "DEVICE"
+          }
+        },
+        "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51" : {
+          "id" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
+          "alias" : "dashboard state",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "4a66ada0-4c93-11ed-9e7b-9b740bed105d"
+            }
+          }
+        },
+        "012d3898-48e9-2a71-de71-aba4957f4420" : {
+          "id" : "012d3898-48e9-2a71-de71-aba4957f4420",
+          "alias" : "All Traders",
+          "filter" : {
+            "type" : "entitiesByGroupName",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "groupType" : "DEVICE",
+            "entityGroupNameFilter" : "Traders"
+          }
+        },
+        "489386a8-e333-3ead-12af-3c61cbb72821" : {
+          "id" : "489386a8-e333-3ead-12af-3c61cbb72821",
+          "alias" : "Users",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "USER"
+          }
+        },
+        "7fb0220f-51fc-ffad-4aa8-ada20b1a49ce" : {
+          "id" : "7fb0220f-51fc-ffad-4aa8-ada20b1a49ce",
+          "alias" : "sequences",
+          "filter" : {
+            "type" : "entitiesByGroupName",
+            "resolveMultiple" : true,
+            "groupStateEntity" : true,
+            "stateEntityParamName" : null,
+            "groupType" : "ASSET",
+            "entityGroupNameFilter" : "Sequences"
+          }
+        },
+        "b59b45bd-a4fa-d0d8-8e2a-d0234057e422" : {
+          "id" : "b59b45bd-a4fa-d0d8-8e2a-d0234057e422",
+          "alias" : "Callum",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "4a66ada0-4c93-11ed-9e7b-9b740bed105d"
+            }
+          }
+        },
+        "d0789829-429d-842a-caed-e225bff7d3b6" : {
+          "id" : "d0789829-429d-842a-caed-e225bff7d3b6",
+          "alias" : "Brains",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "DEVICE",
+            "entityGroup" : "3f41efb0-4c94-11ed-9e7b-9b740bed105d"
+          }
+        },
+        "a88e69e8-e06e-66c8-382e-3dcd0c9d7abf" : {
+          "id" : "a88e69e8-e06e-66c8-382e-3dcd0c9d7abf",
+          "alias" : "Brain1",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "4a66ada0-4c93-11ed-9e7b-9b740bed105d"
+            }
+          }
+        }
+      },
+      "filters" : {
+        "82acda7c-98c8-f19d-1fde-decca3d8457c" : {
+          "id" : "82acda7c-98c8-f19d-1fde-decca3d8457c",
+          "filter" : "not the user email",
+          "keyFilters" : [ {
+            "key" : {
+              "type" : "ENTITY_FIELD",
+              "key" : "email"
+            },
+            "valueType" : "STRING",
+            "predicates" : [ {
+              "keyFilterPredicate" : {
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : "",
+                  "dynamicValue" : {
+                    "sourceType" : "CURRENT_CUSTOMER",
+                    "sourceAttribute" : "email",
+                    "inherit" : false
+                  }
+                },
+                "ignoreCase" : false,
+                "type" : "STRING"
+              },
+              "userInfo" : {
+                "editable" : true,
+                "label" : "",
+                "autogeneratedLabel" : true,
+                "order" : 0
+              }
+            } ]
+          } ],
+          "editable" : true
+        }
+      },
+      "timewindow" : {
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "timewindowMs" : 18000000,
+          "quickInterval" : "CURRENT_DAY",
+          "interval" : 60000
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : false,
+        "showEntitiesSelect" : false,
+        "showDashboardTimewindow" : false,
+        "showDashboardExport" : false,
+        "toolbarAlwaysOpen" : false,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : true,
+        "showFilters" : false,
+        "showUpdateDashboardImage" : false
+      }
+    },
+    "createdTime" : 1665843344039,
+    "customerId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "a2b6df40-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "a2b6df40-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Project BeanStalk",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "Project BeanStalk"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

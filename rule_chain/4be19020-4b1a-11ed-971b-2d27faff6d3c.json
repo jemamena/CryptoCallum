@@ -1,0 +1,675 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1665843343671,
+    "debugMode" : false,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "4be19020-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "db069aa0-4c93-11ed-9e7b-9b740bed105d"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "4be19020-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "name" : "tradePrep",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "True"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 23,
+      "type" : "True"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 0,
+      "type" : "False"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "False"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "True"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 25,
+      "type" : "True"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 9,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 20,
+      "type" : "Cleared"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 15,
+      "type" : "RPC Request to Device"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 17,
+      "type" : "RPC Request from Device"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 21,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 24,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 18,
+      "type" : "True"
+    } ],
+    "firstNodeIndex" : 12,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1631,
+        "layoutY" : 320
+      },
+      "configuration" : {
+        "jsScript" : "\nmsg={};\n\nmsg.tradeReady=true;\nmsg.tradePrep=true;\nmsg.tradeExec=true;\nmsg.tradeDone=true;\n\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db053b10-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Ready for new trade",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1033,
+        "layoutY" : 130
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 2,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db056220-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "delay 2s",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2288,
+        "layoutY" : 480
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "clientAttributeNames" : [ "tradeReady" ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db05b040-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "tradeReady",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2285,
+        "layoutY" : 400
+      },
+      "configuration" : {
+        "jsScript" : "return metadata.cs_tradeReady ==\"false\";"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db05b041-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Ready?",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2287,
+        "layoutY" : 311
+      },
+      "configuration" : {
+        "jsScript" : "\nmsg={};\n\nmsg.tradeReady=true;\nmsg.tradePrep=true;\nmsg.tradeExec=true;\nmsg.tradeDone=true;\n\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db05b042-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Ready for new trade",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1163,
+        "layoutY" : 710
+      },
+      "configuration" : {
+        "useMetadataPeriodInSecondsPatterns" : false,
+        "periodInSeconds" : 1,
+        "periodInSecondsPattern" : null,
+        "maxPendingMsgs" : 1000
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db05d750-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "delay",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.delay.TbMsgDelayNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1957,
+        "layoutY" : 67
+      },
+      "configuration" : {
+        "jsScript" : "\n\nmsg={};\n\n\nmsg.tradeReady=false;\nmsg.tradePrep=false;\nmsg.tradeDone=false;\nmsg.tradeExec=false;\n\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db05d751-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "tradePrep sent",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1154,
+        "layoutY" : 392
+      },
+      "configuration" : {
+        "jsScript" : "return metadata.ss_active==\"true\";"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db062570-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "active and done?",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1655,
+        "layoutY" : 608
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\n\nif (metadata.ss_active==\"false\")details.log=\"Device: \"+metadata.label+\" Offline\";\nelse details.logs=\"Trade to be prepared\";\ndetails.tradeType=metadata.cs_tradeType;\ndetails.trade=metadata.cs_trade;\ndetails.sequence=metadata.sequence;\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : null,
+        "alarmType" : "tradePrep",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : null,
+        "propagateToOwnerHierarchy" : null,
+        "propagateToTenant" : null,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db064c80-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "tradePrep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1985,
+        "layoutY" : 609
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\nfor (var detail in msg.details){\n    details[detail]=msg.details[detail];\n}\nreturn details;",
+        "alarmType" : "tradePrep"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db064c81-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Clear tradePrep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 128,
+        "layoutY" : 567
+      },
+      "configuration" : {
+        "jsScript" : "var method=msg.method;\n\n\nreturn[method,'replies'];\n\n// function nextRelation(metadata, msg) {\n//     return ['one','nine'];\n// }\n// if(method === 'tradePrep') {\n//     return ['tradePrep'];\n// }\n// return nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db064c82-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "filter methods",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 121,
+        "layoutY" : 620
+      },
+      "configuration" : {
+        "jsScript" : "var method=msg.method;\n\n\nreturn[method,'replies'];\n\n// function nextRelation(metadata, msg) {\n//     return ['one','nine'];\n// }\n// if(method === 'tradePrep') {\n//     return ['tradePrep'];\n// }\n// return nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db067390-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "filter methods",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 362,
+        "layoutY" : 210
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db069aa0-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Message Type Switch",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1627,
+        "layoutY" : 233
+      },
+      "configuration" : {
+        "jsScript" : "var tradeSize=msg.params.tradeSize;\nvar stopLoss=msg.params.stopLoss;\nvar takeProfit=msg.params.takeProfit;\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nvar tradeType=metadata.tradeType;\nvar trade=metadata.trade;\nvar sequence=metadata.sequence;\n\nmsg={};\n\nmsg.tradeSize=tradeSize;\nmsg.stopLoss=stopLoss;\nmsg.leverage=leverage;\nmsg.takeProfit=takeProfit;\nmsg.limit=limit;\nmsg.tradeType=tradeType;\nmsg.trade=trade;\nmsg.sequence=sequence;\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db06c1b0-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Save tradePrep params",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 1956,
+        "layoutY" : 402
+      },
+      "configuration" : {
+        "timeoutInSeconds" : 60
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db070fd0-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "RPC Call Request",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCRequestNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 729,
+        "layoutY" : 387
+      },
+      "configuration" : {
+        "jsScript" : "\n\nvar total=parseFloat(metadata.total); \nvar tradeSize=parseFloat(msg.params.tradeSizePC);\nvar stopLoss=parseFloat(msg.params.stopLossPC);\nvar takeProfit=parseFloat(msg.params.takeProfitPC);\nvar leverage=msg.params.leverage;\nvar limit=msg.params.limit;\nmetadata.trade=msg.params.trade;\nmetadata.trade=msg.params.trade;\nmetadata.tradeType=msg.params.tradeType;\nmetadata.sequence=msg.params.sequence;\n\nmsg={};\nmsg.params={};\nmsg.method=\"tradePrep\";\n// var stopLoss=      \n// var takeProfit=\n// var tradeSize=\n\nmsg.params.limit=total/40; \nmsg.params.leverage=parseFloat(leverage); \nmsg.params.tradeSize=parseFloat(total*(tradeSize)/100).toFixed(2); \nmsg.params.takeProfit=parseFloat(msg.params.tradeSize*(takeProfit)/100).toFixed(2); \nmsg.params.stopLoss=parseFloat(msg.params.tradeSize*(stopLoss)/100).toFixed(2);\nmsg.params.total=total; \n\nmsg.params.queueDelay=parseInt(metadata.ss_queueDelay);\nmsgType=\"RPC_CALL_FROM_SERVER_TO_DEVICE\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db078500-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Prepare Trade",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1373,
+        "layoutY" : 138
+      },
+      "configuration" : {
+        "jsScript" : "\nmsg={};\n\nmsg.tradePrep=true;\n\n\n    \nmsgType=\"POST_ATTRIBUTES_REQUEST\";\n\nreturn {msg: msg, metadata: metadata, msgType: msgType}; \n"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07ac10-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Ready for prep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 711,
+        "layoutY" : 123
+      },
+      "configuration" : {
+        "serviceIdMetaDataAttribute" : "serviceId",
+        "sessionIdMetaDataAttribute" : "sessionId",
+        "requestIdMetaDataAttribute" : "requestId"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07ac11-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Replies",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1755,
+        "layoutY" : 481
+      },
+      "configuration" : {
+        "queueName" : "Traders"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07ac12-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "sequencial",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbCheckpointNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2092,
+        "layoutY" : 175
+      },
+      "configuration" : {
+        "scope" : "CLIENT_SCOPE",
+        "notifyDevice" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07ac13-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "save prep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2292,
+        "layoutY" : 608
+      },
+      "configuration" : {
+        "alarmsCountMappings" : [ {
+          "target" : "tradePrep",
+          "typesList" : [ "tradePrep" ],
+          "severityList" : [ ],
+          "statusList" : [ ]
+        } ],
+        "countAlarmsForPropagationEntities" : false,
+        "propagationEntityTypes" : null,
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07d320-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "tradePrep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.alarm.TbAlarmsCountNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2559,
+        "layoutY" : 603
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07d321-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "count alarms",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 1515,
+        "layoutY" : 714
+      },
+      "configuration" : {
+        "ruleChainId" : "436f1660-4b1a-11ed-971b-2d27faff6d3c"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07d322-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "telemetry",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2569,
+        "layoutY" : 306
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\n\ndetails.logs=\"Timeout Trade preparation\";\ndetails.sequence=metadata.sequence;\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : null,
+        "alarmType" : "tradePrep",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : null,
+        "propagateToOwnerHierarchy" : null,
+        "propagateToTenant" : null,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07d323-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "tradePrep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2899,
+        "layoutY" : 307
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n}\nfor (var detail in msg.details){\n    details[detail]=msg.details[detail];\n}\nreturn details;",
+        "alarmType" : "tradePrep"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "db07fa30-4c93-11ed-9e7b-9b740bed105d"
+      },
+      "name" : "Clear tradePrep",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1557,
+        "layoutY" : 395
+      },
+      "configuration" : {
+        "jsScript" : "\nreturn ((metadata.ss_Tbrain == 'LIVE' && metadata.ss_Bbrain == 'LIVE') || (metadata.ss_Tbrain == 'DEMO' && metadata.ss_Bbrain == 'DEMO') || (metadata.ss_Tbrain == 'TEST'  && metadata.ss_Bbrain == 'TEST') );"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e7bf0190-521c-11ed-9c64-392d16c900c2"
+      },
+      "name" : "brain match",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
