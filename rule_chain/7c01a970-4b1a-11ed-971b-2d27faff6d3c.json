@@ -223,7 +223,7 @@
         "tellFailureIfAbsent" : true,
         "clientAttributeNames" : [ "tradeType", "stopLoss", "tradeSize", "takeProfit", "limit", "leverage", "sequence", "trade" ],
         "sharedAttributeNames" : [ ],
-        "serverAttributeNames" : [ "active", "demo" ],
+        "serverAttributeNames" : [ "active" ],
         "latestTsKeyNames" : [ "total" ],
         "getLatestValueWithTs" : false
       },

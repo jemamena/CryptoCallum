@@ -1,0 +1,27 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1665682839031,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "26cb4070-4b1e-11ed-8d02-eb8f0c19e7b0"
+    },
+    "label" : "Extreme Sell",
+    "name" : "E_sell",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Sequences"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

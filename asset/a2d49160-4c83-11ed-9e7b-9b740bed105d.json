@@ -1,0 +1,25 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "createdTime" : 1665836377462,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "a2d49160-4c83-11ed-9e7b-9b740bed105d"
+    },
+    "label" : null,
+    "name" : "SequentialByOriginator_TB-BeanStalk",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "TbServiceQueue"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

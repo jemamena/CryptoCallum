@@ -1,0 +1,113 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "createdTime" : 1665867644298,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "MQTT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "db2ce9a0-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "6f511ea0-4ccc-11ed-84ff-91e3a93d7908"
+    },
+    "label" : "BeanStalk Demo",
+    "name" : "Brain_Demo",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "BeanStalk Brain"
+  },
+  "credentials" : {
+    "credentialsId" : "brainDemo",
+    "credentialsType" : "MQTT_BASIC",
+    "credentialsValue" : "{\"clientId\":null,\"userName\":\"brainDemo\",\"password\":\"CJbeanstalk\"}"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "a6c7ef30-4cd1-11ed-84ff-91e3a93d7908"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "6f511ea0-4ccc-11ed-84ff-91e3a93d7908"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "6f511ea0-4ccc-11ed-84ff-91e3a93d7908"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a6c7ef30-4cd1-11ed-84ff-91e3a93d7908"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1667085358987,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1667085358987,
+      "longValue" : 1667085358987,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1667084753956,
+      "longValue" : 1667084752396,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1666394618381,
+      "longValue" : 1666394618381,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1667084752414,
+      "longValue" : 1667084752414,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

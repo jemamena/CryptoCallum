@@ -578,7 +578,7 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 36000000,
+                "timewindowMs" : 900000,
                 "quickInterval" : "CURRENT_DAY",
                 "interval" : 1000
               },
@@ -1184,7 +1184,7 @@
             "actions" : { },
             "alarmStatusList" : [ "ACTIVE", "ACK", "UNACK" ],
             "alarmSeverityList" : [ ],
-            "alarmTypeList" : [ "newTrade", "tradeDoneBS" ],
+            "alarmTypeList" : [ "newTrade", "tradeDoneBS", "tradePrep", "tradeReady" ],
             "searchPropagatedAlarms" : false,
             "datasources" : [ ],
             "enableDataExport" : true
@@ -1401,38 +1401,14 @@
               "entityAliasId" : "e2ba24fc-7a72-e82b-cbed-e7d2b8a6ad51",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "tradePrep",
+                "name" : "total",
                 "type" : "timeseries",
-                "label" : "tradePrep",
-                "color" : "#2196f3",
-                "settings" : {
-                  "excludeFromStacking" : false,
-                  "hideDataByDefault" : false,
-                  "disableDataHiding" : false,
-                  "removeFromLegend" : false,
-                  "showLines" : true,
-                  "fillLines" : false,
-                  "showPoints" : false,
-                  "showPointShape" : "circle",
-                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                  "showPointsLineWidth" : 5,
-                  "showPointsRadius" : 3,
-                  "tooltipValueFormatter" : "",
-                  "showSeparateAxis" : false,
-                  "axisTitle" : "",
-                  "axisPosition" : "left",
-                  "axisTicksFormatter" : "",
-                  "thresholds" : [ {
-                    "thresholdValueSource" : "predefinedValue"
-                  } ],
-                  "comparisonSettings" : {
-                    "showValuesForComparison" : true,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
-                  }
-                },
-                "_hash" : 0.09958256067307625
-              } ]
+                "label" : "total",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6017595966683755
+              } ],
+              "latestDataKeys" : null
             } ],
             "timewindow" : {
               "hideInterval" : false,
@@ -1456,44 +1432,45 @@
             "color" : "#0c0c0c",
             "padding" : "8px",
             "settings" : {
-              "shadowSize" : 4,
-              "fontColor" : "#545454",
+              "stack" : false,
               "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : false,
+              "tooltipCumulative" : false,
+              "hideZeros" : false,
+              "grid" : {
+                "verticalLines" : false,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#101010",
+                "backgroundColor" : "rgba(0, 0, 0, 0.16)",
+                "tickColor" : "#807c7c"
+              },
               "xaxis" : {
+                "title" : null,
                 "showLabels" : true,
                 "color" : "#0c0b0b"
               },
               "yaxis" : {
+                "min" : 32000,
+                "max" : 34000,
+                "title" : null,
                 "showLabels" : true,
                 "color" : "#232323",
+                "tickSize" : null,
                 "tickDecimals" : 1,
-                "min" : 32000,
-                "max" : 34000
+                "ticksFormatter" : ""
               },
-              "grid" : {
-                "color" : "#101010",
-                "tickColor" : "#807c7c",
-                "verticalLines" : false,
-                "horizontalLines" : true,
-                "outlineWidth" : 1,
-                "backgroundColor" : "rgba(0, 0, 0, 0.16)"
-              },
-              "stack" : false,
-              "tooltipIndividual" : false,
-              "timeForComparison" : "previousInterval",
-              "xaxisSecond" : {
-                "axisPosition" : "top",
-                "showLabels" : true
-              },
+              "shadowSize" : 4,
               "smoothLines" : false,
               "comparisonEnabled" : false,
-              "showTooltip" : true,
-              "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ {
-                "type" : "timeseries",
-                "name" : "alarm0",
-                "settings" : { }
-              } ]
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
+              },
+              "customLegendEnabled" : false
             },
             "title" : "",
             "dropShadow" : false,
@@ -2450,9 +2427,9 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 36000000,
+                "timewindowMs" : 7200000,
                 "quickInterval" : "CURRENT_DAY",
-                "interval" : 3600000
+                "interval" : 900000
               },
               "aggregation" : {
                 "type" : "COUNT",
@@ -2579,7 +2556,7 @@
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 0,
-                "timewindowMs" : 43200000,
+                "timewindowMs" : 18000000,
                 "quickInterval" : "CURRENT_DAY",
                 "interval" : 1000
               },

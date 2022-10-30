@@ -1,0 +1,201 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "createdTime" : 1665681589780,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "MQTT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "fb9f56f0-4b1a-11ed-971b-2d27faff6d3c"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "3e2ead40-4b1b-11ed-971b-2d27faff6d3c"
+    },
+    "label" : "Callum",
+    "name" : "Trader_001",
+    "ownerId" : null,
+    "softwareId" : null,
+    "tenantId" : null,
+    "type" : "Traders"
+  },
+  "credentials" : {
+    "credentialsId" : "trader_callum",
+    "credentialsType" : "MQTT_BASIC",
+    "credentialsValue" : "{\"clientId\":null,\"userName\":\"trader_callum\",\"password\":\"@Bangor2010\"}"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "278db150-4c77-11ed-9e7b-9b740bed105d"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "3e2ead40-4b1b-11ed-971b-2d27faff6d3c"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "3e2ead40-4b1b-11ed-971b-2d27faff6d3c"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "278db150-4c77-11ed-9e7b-9b740bed105d"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1667134358783,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1667092798994,
+      "longValue" : 1667092798993,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1665832713429,
+      "longValue" : 600000,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1667169998964,
+      "longValue" : 1667169997292,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1667134358783,
+      "longValue" : 1667134358783,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1667092187955,
+      "longValue" : 1667092187955,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastInactivityAlarmTime",
+      "lastUpdateTs" : 1665832713429,
+      "longValue" : 1665682241725,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "leverage",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "limit",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "sequence",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 1,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "stopLoss",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "takeProfit",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "trade",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : null,
+      "strValue" : ""
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tradeDone",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tradeSize",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "tradeType",
+      "lastUpdateTs" : 1665836158607,
+      "longValue" : null,
+      "strValue" : ""
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

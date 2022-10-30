@@ -260,8 +260,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1297,
-        "layoutY" : 319
+        "layoutX" : 1278,
+        "layoutY" : 341
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -288,8 +288,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 877,
-        "layoutY" : 396
+        "layoutX" : 887,
+        "layoutY" : 477
       },
       "configuration" : {
         "jsScript" : "var method=msg.method;\n\n\nreturn[method, 'replies'];\n\n// function nextRelation(metadata, msg) {\n//     return ['one','nine'];\n// }\n// if(method === 'tradePrep') {\n//     return ['tradePrep'];\n// }\n// return nextRelation(metadata, msg);"
